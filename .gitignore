@@ -5,7 +5,6 @@
 
 # IDE #
 target/
-.idea/
 
 # Package Files #
 *.jar
