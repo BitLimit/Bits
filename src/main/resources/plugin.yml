@@ -1,0 +1,13 @@
+main: com.bitlimit.bits.Bits
+name: Bits
+version: ${project.version}
+author: Kolin Krewinkel
+description: Reactive economy.
+website: https://github.com/BitLimit/Bits/
+commands:
+    bits:
+        description: Unimplemented and implicitly undocumented.
+permissions:
+    bits.*:
+        description: Gives all permissions of the plugin.
+        default: op

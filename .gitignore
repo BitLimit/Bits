@@ -1,5 +1,9 @@
 *.class
 
+# IDE #
+target/
+.idea/
+
 # Package Files #
 *.jar
 *.war
