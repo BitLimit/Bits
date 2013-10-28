@@ -1,9 +1,10 @@
-main: com.bitlimit.bits.Bits
+main: com.bitlimit.bits.bukkit.BitsPlugin
 name: Bits
 version: ${project.version}
 author: Kolin Krewinkel
 description: Reactive economy.
 website: https://github.com/BitLimit/Bits/
+softdepend: [Pulse]
 commands:
     bits:
         description: Unimplemented and implicitly undocumented.

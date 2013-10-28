@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Bits">
+    <output-path>$PROJECT_DIR$/../Testing Server/plugins</output-path>
+    <root id="archive" name="Bits.jar">
+      <element id="module-output" name="Bits" />
+      <element id="file-copy" path="$PROJECT_DIR$/../Pulse/src/main/resources/plugin.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/../Pulse/src/main/resources/config.yml" />
+    </root>
+  </artifact>
+</component>
