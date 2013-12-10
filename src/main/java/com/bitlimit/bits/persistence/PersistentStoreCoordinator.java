@@ -1,5 +1,6 @@
 package com.bitlimit.bits.persistence;
 
+import com.bitlimit.bits.configuration.ConfigurationManager;
 import com.bitlimit.pulse.Pulse;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
@@ -10,9 +11,13 @@ import java.util.logging.Level;
 
 public class PersistentStoreCoordinator
 {
-	private static PersistentStoreCoordinator sharedCoordinator = null;
+	/*
+	 *
+	 *  Singleton
+	 *
+	 */
 
-	private final Plugin plugin;
+	private static PersistentStoreCoordinator sharedCoordinator = null;
 
 	protected PersistentStoreCoordinator()
 	{
@@ -22,14 +27,14 @@ public class PersistentStoreCoordinator
 		{
 			Pulse.recordCondition(this.plugin, "connecting to database.", Level.FINEST);
 
-			Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:" + port.toString() + "/bits", username, password);
+			Connection connection = DriverManager.getConnection(ConfigurationManager.getSharedManager().getPostgresURI(), ConfigurationManager.getSharedManager().getPostgresUsername(), ConfigurationManager.getSharedManager().getPostgresPassword());
 			connection.close();
 
-			Pulse.recordCondition(this, "connected to database.", Level.FINE);
+			Pulse.recordCondition(this.plugin, "connected to database.", Level.FINE);
 		}
 		catch (Exception e)
 		{
-			Pulse.recordCondition(this, "failed to connect to database.", Level.SEVERE);
+			Pulse.recordCondition(this.plugin, "failed to connect to database.", Level.SEVERE);
 		}
 	}
 
@@ -42,4 +47,18 @@ public class PersistentStoreCoordinator
 
 		return sharedCoordinator;
 	}
+
+	/*
+	 *
+	 *  Declarations
+	 *
+	 */
+
+	private final Plugin plugin;
+
+	/*
+	 *
+	 *  Implementation
+	 *
+	 */
 }

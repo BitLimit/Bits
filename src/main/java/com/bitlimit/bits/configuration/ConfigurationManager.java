@@ -5,22 +5,15 @@ import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.Plugin;
 
-import java.util.List;
-
 public class ConfigurationManager
 {
-	private static ConfigurationManager sharedManager = null;
-
-	private final Plugin plugin;
-	private final FileConfiguration fileConfiguration;
-
 	/*
 	 *
-	 *
-	 * Singleton
-	 *
+	 *  Singleton
 	 *
 	 */
+
+	private static ConfigurationManager sharedManager = null;
 
 	protected ConfigurationManager()
 	{
@@ -42,9 +35,16 @@ public class ConfigurationManager
 
 	/*
 	 *
+	 *  Declarations
 	 *
-	 * Base config
+	 */
+
+	private final Plugin plugin;
+	private final FileConfiguration fileConfiguration;
+
+	/*
 	 *
+	 *  Implementation
 	 *
 	 */
 

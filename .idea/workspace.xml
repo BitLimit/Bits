@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b1c196c-c742-4a3d-8979-7e7a30829a40" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/configuration/ConfigurationManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config.yml" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/configuration/ConfigurationManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/configuration/ConfigurationManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java" />
     </list>
     <ignored path="Bits.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,8 +21,8 @@
     <file path="/pom.xml" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1382926056024" ignored="false" />
     <file path="/a.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386638957685" ignored="false" />
     <file path="/sample.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386638854280" ignored="false" />
-    <file path="/PersistentStoreCoordinator.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386640137581" ignored="false" />
-    <file path="/ConfigurationManager.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386643402693" ignored="false" />
+    <file path="/PersistentStoreCoordinator.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386653481588" ignored="false" />
+    <file path="/ConfigurationManager.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386653547828" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,9 +85,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="29" column="0" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -98,7 +93,7 @@
       <file leaf-file-name="PersistentStoreCoordinator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="267" selection-end="1109" vertical-scroll-proportion="0.0">
+            <state line="62" column="7" selection-start="1395" selection-end="1395" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -109,7 +104,7 @@
       <file leaf-file-name="ConfigurationManager.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/configuration/ConfigurationManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="66" selection-start="1415" selection-end="1415" vertical-scroll-proportion="0.9463722">
+            <state line="6" column="0" selection-start="211" selection-end="211" vertical-scroll-proportion="0.041798107">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,8 +134,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/PersistentStoreCoordinator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/config/ConfigurationManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/configuration/ConfigurationManager.java" />
       </list>
     </option>
@@ -570,18 +565,14 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="36" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="25" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -593,36 +584,28 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="25" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="16" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="5" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="78" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -641,15 +624,13 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="0" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="267" selection-end="1109" vertical-scroll-proportion="0.0">
+        <state line="62" column="7" selection-start="1395" selection-end="1395" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -658,7 +639,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/configuration/ConfigurationManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="66" selection-start="1415" selection-end="1415" vertical-scroll-proportion="0.9463722">
+        <state line="6" column="0" selection-start="211" selection-end="211" vertical-scroll-proportion="0.041798107">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
