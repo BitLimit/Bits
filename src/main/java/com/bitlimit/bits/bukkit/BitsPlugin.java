@@ -27,23 +27,7 @@ public class BitsPlugin extends JavaPlugin
 
 	public void initializeConnection()
 	{
-		Integer port = 5432;
-		String username = "yolo";
-		String password = "swag";
 
-		try
-		{
-			Pulse.recordCondition(this, "connecting to database.", Level.FINEST);
-
-			Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:" + port.toString() + "/bits", username, password);
-			connection.close();
-
-			Pulse.recordCondition(this, "connected to database.", Level.FINE);
-		}
-		catch (Exception e)
-		{
-			Pulse.recordCondition(this, "failed to connect to database.", Level.SEVERE);
-		}
 	}
 
 }

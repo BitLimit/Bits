@@ -1,0 +1,5 @@
+persistence:
+    uri: jdbc:postgresql://localhost/bits
+    username: bits
+    password: bits
+    
