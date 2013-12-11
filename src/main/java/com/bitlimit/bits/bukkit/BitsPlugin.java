@@ -1,6 +1,7 @@
 package com.bitlimit.bits.bukkit;
 
 import com.bitlimit.pulse.PluginCondition;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import com.bitlimit.pulse.Pulse;
 
@@ -15,8 +16,6 @@ public class BitsPlugin extends JavaPlugin
 	public void onEnable()
 	{
 		Pulse.notePluginCondition(this, PluginCondition.LOADED, true, null);
-
-		this.initializeConnection();
 	}
 
 	@Override
@@ -25,9 +24,8 @@ public class BitsPlugin extends JavaPlugin
 
 	}
 
-	public void initializeConnection()
+	public static BitsPlugin getPlugin()
 	{
-
+		return (BitsPlugin)Bukkit.getPluginManager().getPlugin("Bits");
 	}
-
 }

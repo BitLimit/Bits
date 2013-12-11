@@ -1,9 +1,25 @@
 package com.bitlimit.bits.configuration;
 
+import net.minecraft.server.v1_6_R2.EntityLeash;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.event.Event;
+import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.block.BlockPlaceEvent;
+import org.bukkit.event.enchantment.EnchantItemEvent;
+import org.bukkit.event.entity.EntityDeathEvent;
+import org.bukkit.event.entity.EntityRegainHealthEvent;
+import org.bukkit.event.entity.EntityShootBowEvent;
+import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.event.hanging.HangingPlaceEvent;
+import org.bukkit.event.inventory.BrewEvent;
+import org.bukkit.event.inventory.FurnaceExtractEvent;
+import org.bukkit.event.player.*;
 import org.bukkit.plugin.Plugin;
+
+import java.util.HashMap;
+import java.util.List;
 
 public class ConfigurationManager
 {
@@ -79,5 +95,72 @@ public class ConfigurationManager
 	public String getPostgresPassword()
 	{
 		return this.getPersistenceSection().getString("password");
+	}
+
+	/*
+	 *
+	 *  Gameplay Mechanics
+	 *
+	 */
+
+	private ConfigurationSection getGameplayMechanicsSection()
+	{
+		return this.fileConfiguration.getConfigurationSection("gameplay-mechanics");
+	}
+
+	/*
+	 *
+	 *  Listeners
+	 *
+	 */
+
+	private ConfigurationSection getListenerSection()
+	{
+		return this.getGameplayMechanicsSection().getConfigurationSection("monitor");
+	}
+
+	private static HashMap<String, Class> getEventClassAssociations()
+	{
+		HashMap<String, Class> classHashMap = new HashMap<String, Class>();
+		classHashMap.put("block-break", BlockBreakEvent.class);
+		classHashMap.put("block-place", BlockPlaceEvent.class);
+
+//		classHashMap.put("entity-leash", PlayerLeashEntityEvent.class);
+		classHashMap.put("entity-kill", EntityDeathEvent.class);
+		classHashMap.put("entity-shear", PlayerShearEntityEvent.class);
+
+		classHashMap.put("item-brew", BrewEvent.class);
+		classHashMap.put("item-enchant", EnchantItemEvent.class);
+		classHashMap.put("item-furnace", FurnaceExtractEvent.class);
+
+		classHashMap.put("painting-create", HangingPlaceEvent.class);
+
+		classHashMap.put("player-regenerate", EntityRegainHealthEvent.class);
+		classHashMap.put("player-shoot", EntityShootBowEvent.class);
+		classHashMap.put("player-chat", AsyncPlayerChatEvent.class);
+		classHashMap.put("player-death", PlayerDeathEvent.class);
+		classHashMap.put("player-sleep", PlayerBedEnterEvent.class);
+		classHashMap.put("player-author", PlayerEditBookEvent.class);
+		classHashMap.put("player-egg", PlayerEggThrowEvent.class);
+		classHashMap.put("player-fish", PlayerFishEvent.class);
+		classHashMap.put("player-eat", BlockBreakEvent.class);
+		classHashMap.put("player-join", BlockBreakEvent.class);
+		classHashMap.put("player-move", BlockBreakEvent.class);
+
+		classHashMap.put("portal-create", BlockBreakEvent.class);
+
+		classHashMap.put("vehicle-move", BlockBreakEvent.class);
+
+		classHashMap.put("world-change", BlockBreakEvent.class);
+	}
+
+	private static Class<Event> getEventClassFromConfigurationString(String configString)
+	{
+
+	}
+
+	public List<Class<Event>> getMonitoredEventClasses()
+	{
+
 	}
 }
