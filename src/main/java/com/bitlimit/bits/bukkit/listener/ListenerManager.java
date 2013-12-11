@@ -1,6 +1,13 @@
 package com.bitlimit.bits.bukkit.listener;
 
+import com.bitlimit.bits.configuration.ConfigurationManager;
+import org.bukkit.event.Event;
+import org.bukkit.event.Listener;
+import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.block.BlockPlaceEvent;
+
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -40,6 +47,19 @@ public class ListenerManager
 
 	private void loadFromConfig()
 	{
+		List<Class<Event>> classesToMonitor = ConfigurationManager.getSharedManager().getMonitoredEventClasses();
 
+	}
+
+	private Listener listenerForEventClass(Class<Event> eventClass)
+	{
+		if (eventClass.equals(BlockBreakEvent.class))
+		{
+			return new BlockBreakListener();
+		}
+		else if (eventClass.equals(BlockPlaceEvent.class))
+		{
+			return new BlockPlaceListener();
+		}
 	}
 }

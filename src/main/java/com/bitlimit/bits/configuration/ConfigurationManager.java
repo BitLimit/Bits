@@ -18,8 +18,10 @@ import org.bukkit.event.inventory.FurnaceExtractEvent;
 import org.bukkit.event.player.*;
 import org.bukkit.plugin.Plugin;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.ListIterator;
 
 public class ConfigurationManager
 {
@@ -114,11 +116,6 @@ public class ConfigurationManager
 	 *
 	 */
 
-	private ConfigurationSection getListenerSection()
-	{
-		return this.getGameplayMechanicsSection().getConfigurationSection("monitor");
-	}
-
 	private static HashMap<String, Class> getEventClassAssociations()
 	{
 		HashMap<String, Class> classHashMap = new HashMap<String, Class>();
@@ -154,13 +151,21 @@ public class ConfigurationManager
 		classHashMap.put("world-change", BlockBreakEvent.class);
 	}
 
-	private static Class<Event> getEventClassFromConfigurationString(String configString)
-	{
-
-	}
-
 	public List<Class<Event>> getMonitoredEventClasses()
 	{
+		List<String> toMonitorList = this.getGameplayMechanicsSection().getStringList("monitor");
+		HashMap<String, Class> classMap = ConfigurationManager.getEventClassAssociations();
 
+		ArrayList<Class<Event>> eventClasses = new ArrayList<Class<Event>>();
+
+		ListIterator monitorIterator = toMonitorList.listIterator();
+
+		while (monitorIterator.hasNext())
+		{
+			String monitor = (String)monitorIterator.next();
+			eventClasses.add(classMap.get(monitor));
+		}
+
+		return eventClasses;
 	}
 }
