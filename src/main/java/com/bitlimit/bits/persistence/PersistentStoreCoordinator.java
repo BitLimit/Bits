@@ -23,19 +23,24 @@ public class PersistentStoreCoordinator
 	{
 		this.plugin = Bukkit.getPluginManager().getPlugin("Bits");
 
+		Connection connection;
+
 		try
 		{
 			Pulse.recordCondition(this.plugin, "connecting to database.", Level.FINEST);
 
-			Connection connection = DriverManager.getConnection(ConfigurationManager.getSharedManager().getPostgresURI(), ConfigurationManager.getSharedManager().getPostgresUsername(), ConfigurationManager.getSharedManager().getPostgresPassword());
-			connection.close();
+			connection = DriverManager.getConnection(ConfigurationManager.getSharedManager().getPostgresURI(), ConfigurationManager.getSharedManager().getPostgresUsername(), ConfigurationManager.getSharedManager().getPostgresPassword());
 
 			Pulse.recordCondition(this.plugin, "connected to database.", Level.FINE);
 		}
 		catch (Exception e)
 		{
 			Pulse.recordCondition(this.plugin, "failed to connect to database.", Level.SEVERE);
+
+			connection = null;
 		}
+
+		this.connection = connection;
 	}
 
 	public static PersistentStoreCoordinator getSharedCoordinator()
@@ -55,6 +60,7 @@ public class PersistentStoreCoordinator
 	 */
 
 	private final Plugin plugin;
+	private final Connection connection;
 
 	/*
 	 *
