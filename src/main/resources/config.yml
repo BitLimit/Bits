@@ -2,4 +2,36 @@ persistence:
     uri: jdbc:postgresql://localhost/bits
     username: bits
     password: bits
-    
+
+gameplay-mechanics:
+    monitor:
+        - block-break
+        - block-place
+        
+        - entity-leash
+        - entity-kill
+        - entity-shear
+
+        - item-brew
+        - item-enchant        
+        - item-furnace
+        
+        - painting-create
+
+        - player-regenerate
+        - player-shoot
+        - player-chat
+        - player-death        
+        - player-sleep
+        - player-author
+        - player-egg
+        - player-fish
+        - player-eat
+        - player-join
+        - player-move
+
+        - portal-create
+        
+        - vehicle-move
+
+        - world-change
