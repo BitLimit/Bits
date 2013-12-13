@@ -20,10 +20,13 @@ public class EventListener implements Listener
 	public EventListener()
 	{
 		Bukkit.getPluginManager().registerEvents(this, BitsPlugin.getPlugin());
+
+		System.out.println("registered events with plugin: " + BitsPlugin.getPlugin().toString());
 	}
 
 	public void onEvent(Event event)
 	{
+		System.out.println("sup");
 		Pulse.recordCondition(BitsPlugin.getPlugin(), event.getEventName() + " received.", Level.FINEST);
 	}
 }

@@ -1,6 +1,7 @@
 package com.bitlimit.bits.bukkit.listener;
 
 import com.bitlimit.bits.configuration.ConfigurationManager;
+import org.bukkit.Bukkit;
 import org.bukkit.event.Event;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
@@ -56,17 +57,22 @@ public class ListenerManager
 		List<Class<Event>> classesToMonitor = ConfigurationManager.getSharedManager().getMonitoredEventClasses();
 		ListIterator<Class<Event>> classListIterator = classesToMonitor.listIterator();
 
-		System.out.println(classesToMonitor.toString());
-
 		while (classListIterator.hasNext())
 		{
 			Class<Event> eventClass = classListIterator.next();
 
-			EventListener eventListener = ListenerManager.listenerForEventClass(eventClass);
-
-			if (eventListener != null)
+			if (eventClass != null)
 			{
-				this.eventListeners.put(eventClass, eventListener);
+				EventListener eventListener = ListenerManager.listenerForEventClass(eventClass);
+
+				System.out.println(eventClass.toString());
+
+				if (eventListener != null)
+				{
+					System.out.println(eventListener.toString());
+
+					this.eventListeners.put(eventClass, eventListener);
+				}
 			}
 		}
 	}

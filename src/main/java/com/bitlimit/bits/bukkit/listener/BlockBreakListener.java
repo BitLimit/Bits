@@ -1,5 +1,7 @@
 package com.bitlimit.bits.bukkit.listener;
 
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.block.BlockBreakEvent;
 
 /**
@@ -11,6 +13,7 @@ import org.bukkit.event.block.BlockBreakEvent;
  */
 public class BlockBreakListener extends EventListener
 {
+	@EventHandler(priority = EventPriority.LOW, ignoreCancelled = true)
 	public void onBlockBreakEvent(BlockBreakEvent blockBreakEvent)
 	{
 		this.onEvent(blockBreakEvent);
