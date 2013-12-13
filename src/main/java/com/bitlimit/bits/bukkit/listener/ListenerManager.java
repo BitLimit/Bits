@@ -55,6 +55,12 @@ public class ListenerManager
 	private void loadFromConfig()
 	{
 		List<Class<Event>> classesToMonitor = ConfigurationManager.getSharedManager().getMonitoredEventClasses();
+
+		if (classesToMonitor == null)
+		{
+			return;
+		}
+
 		ListIterator<Class<Event>> classListIterator = classesToMonitor.listIterator();
 
 		while (classListIterator.hasNext())

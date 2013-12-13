@@ -6,11 +6,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import com.bitlimit.pulse.Pulse;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.util.logging.Level;
-
-
 public class BitsPlugin extends JavaPlugin
 {
 	@Override

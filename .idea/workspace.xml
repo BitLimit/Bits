@@ -2,12 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b1c196c-c742-4a3d-8979-7e7a30829a40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/EventListener.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/EventListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_rxjava_rxjava_core_0_5_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_0.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_2_0_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Bits.iml" afterPath="$PROJECT_DIR$/Bits.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/configuration/ConfigurationManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/configuration/ConfigurationManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/ListenerManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/ListenerManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config.yml" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Bits.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386912391164" ignored="false" />
-    <file path="/BitsPlugin.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386913091806" ignored="false" />
+    <file path="/Dummy.txt" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387045694034" ignored="false" />
+    <file path="/BitsPlugin.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386992738028" ignored="false" />
     <file path="$PROJECT_DIR$/../Pulse/src/main/java/com/bitlimit/pulse/bukkit/PulsePlugin.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1382931005380" ignored="false" />
     <file path="/PulsePlugin.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1382930371842" ignored="false" />
     <file path="$PROJECT_DIR$/../Pulse/META-INF/MANIFEST.MF" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1382577122366" ignored="false" />
@@ -21,11 +31,11 @@
     <file path="/a.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386638957685" ignored="false" />
     <file path="/sample.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386638854280" ignored="false" />
     <file path="/PersistentStoreCoordinator.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386724014456" ignored="false" />
-    <file path="/ConfigurationManager.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386913597102" ignored="false" />
+    <file path="/ConfigurationManager.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387046683103" ignored="false" />
     <file path="/BlockBreakListener.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386914561536" ignored="false" />
     <file path="/BlockPlaceListener.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386733958403" ignored="false" />
     <file path="/Listener.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386734152418" ignored="false" />
-    <file path="/ListenerManager.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386914349451" ignored="false" />
+    <file path="/ListenerManager.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387002631523" ignored="false" />
     <file path="/EventListener.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386914496578" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +51,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -75,7 +86,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -88,7 +98,7 @@
       <file leaf-file-name="BitsPlugin.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="63" selection-start="585" selection-end="585" vertical-scroll-proportion="0.0">
+            <state line="6" column="32" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -97,7 +107,7 @@
       <file leaf-file-name="ListenerManager.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/ListenerManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="0" selection-start="1578" selection-end="1578" vertical-scroll-proportion="0.0">
+            <state line="56" column="97" selection-start="1126" selection-end="1126" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -112,10 +122,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConfigurationManager.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ConfigurationManager.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/configuration/ConfigurationManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="163" column="24" selection-start="4341" selection-end="4341" vertical-scroll-proportion="0.0">
+            <state line="48" column="27" selection-start="1406" selection-end="1406" vertical-scroll-proportion="-2.8103757">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -123,10 +133,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventListener.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="EventListener.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/EventListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="45" selection-start="591" selection-end="691" vertical-scroll-proportion="0.3508772">
+            <state line="29" column="60" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -136,9 +146,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="15" column="71" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -177,11 +185,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/Listener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockPlaceListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/configuration/ConfigurationManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/ListenerManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/EventListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/ListenerManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/configuration/ConfigurationManager.java" />
       </list>
     </option>
   </component>
@@ -227,7 +235,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -249,6 +256,28 @@
               <option name="myItemId" value="Bits" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: com.netflix.rxjava:rxjava-core:0.5.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rxjava-core-0.5.0.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -275,28 +304,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bits" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bits" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -426,18 +433,19 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="preferences.keymap" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Pulse/src/main/resources/config.yml" />
-    <property name="project.structure.side.proportion" value="0.2995338" />
+    <property name="project.structure.side.proportion" value="0.2948718" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -570,17 +578,17 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32522124" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24384081" sideWeight="0.67156106" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24384081" sideWeight="0.67477876" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843894" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -645,13 +653,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockPlaceListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="39" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="25" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
@@ -711,29 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="63" selection-start="585" selection-end="585" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/configuration/ConfigurationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="163" column="24" selection-start="4341" selection-end="4341" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/ListenerManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="0" selection-start="1578" selection-end="1578" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockPlaceListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="39" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
@@ -744,16 +722,42 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="71" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/EventListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="45" selection-start="591" selection-end="691" vertical-scroll-proportion="0.3508772">
+        <state line="29" column="60" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="32" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/rxjava/rxjava-core/0.5.0/rxjava-core-0.5.0-sources.jar!/rx/util/functions/Func1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="13" selection-start="687" selection-end="687" vertical-scroll-proportion="0.07017544" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/ListenerManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="97" selection-start="1126" selection-end="1126" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/configuration/ConfigurationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="27" selection-start="1406" selection-end="1406" vertical-scroll-proportion="-2.8103757">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -767,7 +771,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2995338" />
+                <option value="0.2948718" />
                 <option value="0.5" />
               </list>
             </option>
@@ -803,7 +807,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.2948718" />
               </list>
             </option>
           </splitter-proportions>
@@ -827,8 +831,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2995338" />
-                <option value="0.5" />
+                <option value="0.2948718" />
               </list>
             </option>
           </splitter-proportions>
@@ -848,11 +851,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: org.bukkit:craftbukkit:1.6.2-R0.1</last-edited>
+          <last-edited>Maven: com.bitlimit:pulse:0.0.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2995338" />
+                <option value="0.2948718" />
               </list>
             </option>
           </splitter-proportions>

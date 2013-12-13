@@ -19,10 +19,10 @@ import org.bukkit.event.vehicle.VehicleMoveEvent;
 import org.bukkit.event.world.PortalCreateEvent;
 import org.bukkit.plugin.Plugin;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
+
+import rx.Observable;
+import rx.util.functions.Func1;
 
 public class ConfigurationManager
 {
@@ -156,19 +156,29 @@ public class ConfigurationManager
 
 	public List<Class<Event>> getMonitoredEventClasses()
 	{
-		List<String> toMonitorList = this.getGameplayMechanicsSection().getStringList("monitor");
+		Map<String, Object> toMonitorList = this.getGameplayMechanicsSection().getConfigurationSection("monitor").getValues(false);
 		HashMap<String, Class> classMap = ConfigurationManager.getEventClassAssociations();
 
-		ArrayList<Class<Event>> eventClasses = new ArrayList<Class<Event>>();
+//		ArrayList<Class<Event>> eventClasses = new ArrayList<Class<Event>>();
 
-		ListIterator monitorIterator = toMonitorList.listIterator();
-
-		while (monitorIterator.hasNext())
+		Observable.from(toMonitorList).filter(new Func1<Map<String, Object>, Boolean>()
 		{
-			String monitor = (String)monitorIterator.next();
-			eventClasses.add(classMap.get(monitor));
-		}
+			public Boolean call(Map<String, Object> stringObjectMap)
+			{
+				System.out.println("sup " + stringObjectMap.toString());
+				return null;  //To change body of implemented methods use File | Settings | File Templates.
+			}
+		});
 
-		return eventClasses;
+
+//		ListIterator monitorIterator = toMonitorList.listIterator();
+//
+//		while (monitorIterator.hasNext())
+//		{
+//			String monitor = (String)monitorIterator.next();
+//			eventClasses.add(classMap.get(monitor));
+//		}
+
+		return null;
 	}
 }

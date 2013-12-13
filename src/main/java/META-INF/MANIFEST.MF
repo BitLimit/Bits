@@ -1,4 +1,0 @@
-Manifest-Version: 1.0
-Class-Path: Pulse.jar
-Main-Class: com.bitlimit.bits.bukkit.BitsPlugin
-

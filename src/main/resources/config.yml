@@ -5,33 +5,33 @@ persistence:
 
 gameplay-mechanics:
     monitor:
-        - block-break
-        - block-place
+        block-break: true
+        block-place: true
         
-        - entity-leash
-        - entity-kill
-        - entity-shear
+        entity-leash: true
+        entity-kill: true
+        entity-shear: true
 
-        - item-brew
-        - item-enchant        
-        - item-furnace
+        item-brew: true
+        item-enchant: true
+        item-furnace: true
         
-        - painting-create
+        painting-create: true
 
-        - player-regenerate
-        - player-shoot
-        - player-chat
-        - player-death        
-        - player-sleep
-        - player-author
-        - player-egg
-        - player-fish
-        - player-eat
-        - player-join
-        - player-move
+        player-regenerate: true
+        player-shoot: true
+        player-chat: true
+        player-death: true
+        player-sleep: true
+        player-author: true
+        player-egg: true
+        player-fish: true
+        player-eat: true
+        player-join: true
+        player-move: true
 
-        - portal-create
+        portal-create: true
         
-        - vehicle-move
+        vehicle-move: true
 
-        - world-change
+        world-change: true
