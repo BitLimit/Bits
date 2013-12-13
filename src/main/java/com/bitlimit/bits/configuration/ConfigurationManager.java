@@ -1,6 +1,5 @@
 package com.bitlimit.bits.configuration;
 
-import net.minecraft.server.v1_6_R2.EntityLeash;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
