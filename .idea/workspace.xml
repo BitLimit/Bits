@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b1c196c-c742-4a3d-8979-7e7a30829a40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/EventListener.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/EventListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/ListenerManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/ListenerManager.java" />
     </list>
     <ignored path="Bits.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,10 +24,10 @@
     <file path="/sample.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386638854280" ignored="false" />
     <file path="/PersistentStoreCoordinator.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386724014456" ignored="false" />
     <file path="/ConfigurationManager.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386738361164" ignored="false" />
-    <file path="/BlockBreakListener.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386733952348" ignored="false" />
+    <file path="/BlockBreakListener.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386911653082" ignored="false" />
     <file path="/BlockPlaceListener.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386733958403" ignored="false" />
     <file path="/Listener.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386734152418" ignored="false" />
-    <file path="/ListenerManager.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386741020331" ignored="false" />
+    <file path="/ListenerManager.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386911458913" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,10 +95,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListenerManager.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ListenerManager.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/ListenerManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="162" selection-start="605" selection-end="605" vertical-scroll-proportion="0.22807017">
+            <state line="61" column="32" selection-start="1392" selection-end="1392" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,16 +127,16 @@
       <file leaf-file-name="EventListener.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/EventListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="43" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0">
+            <state line="17" column="13" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BlockBreakListener.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BlockBreakListener.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
+            <state line="13" column="0" selection-start="302" selection-end="389" vertical-scroll-proportion="0.22807017">
               <folding />
             </state>
           </provider>
@@ -176,9 +178,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockPlaceListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/EventListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/configuration/ConfigurationManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/ListenerManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java" />
       </list>
     </option>
   </component>
@@ -708,20 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/EventListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="43" selection-start="696" selection-end="696" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="0" selection-start="882" selection-end="882" vertical-scroll-proportion="0.0">
@@ -745,10 +733,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/ListenerManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="162" selection-start="605" selection-end="605" vertical-scroll-proportion="0.22807017">
+        <state line="61" column="32" selection-start="1392" selection-end="1392" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/EventListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="13" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="302" selection-end="389" vertical-scroll-proportion="0.22807017">
+          <folding />
         </state>
       </provider>
     </entry>

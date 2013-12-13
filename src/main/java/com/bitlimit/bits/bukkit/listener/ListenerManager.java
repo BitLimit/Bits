@@ -8,6 +8,7 @@ import org.bukkit.event.block.BlockPlaceEvent;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.ListIterator;
 
 /**
  * Created with IntelliJ IDEA.
@@ -48,10 +49,17 @@ public class ListenerManager
 	private void loadFromConfig()
 	{
 		List<Class<Event>> classesToMonitor = ConfigurationManager.getSharedManager().getMonitoredEventClasses();
+		ListIterator<Class<Event>> classListIterator = classesToMonitor.listIterator();
 
+		while (classListIterator.hasNext())
+		{
+			Class<Event> eventClass = classListIterator.next();
+
+			this.eventListeners.put(eventClass, ListenerManager.listenerForEventClass(eventClass));
+		}
 	}
 
-	private Listener listenerForEventClass(Class<Event> eventClass)
+	private static EventListener listenerForEventClass(Class<Event> eventClass)
 	{
 		if (eventClass.equals(BlockBreakEvent.class))
 		{

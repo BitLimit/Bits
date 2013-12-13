@@ -1,5 +1,7 @@
 package com.bitlimit.bits.bukkit.listener;
 
+import org.bukkit.event.block.BlockBreakEvent;
+
 /**
  * Created with IntelliJ IDEA.
  * User: kolin
@@ -9,5 +11,8 @@ package com.bitlimit.bits.bukkit.listener;
  */
 public class BlockBreakListener extends EventListener
 {
-
+	public void onBlockBreakEvent(BlockBreakEvent blockBreakEvent)
+	{
+		this.onEvent();
+	}
 }
