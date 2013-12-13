@@ -15,6 +15,8 @@ import org.bukkit.event.hanging.HangingPlaceEvent;
 import org.bukkit.event.inventory.BrewEvent;
 import org.bukkit.event.inventory.FurnaceExtractEvent;
 import org.bukkit.event.player.*;
+import org.bukkit.event.vehicle.VehicleMoveEvent;
+import org.bukkit.event.world.PortalCreateEvent;
 import org.bukkit.plugin.Plugin;
 
 import java.util.ArrayList;
@@ -139,15 +141,15 @@ public class ConfigurationManager
 		classHashMap.put("player-author", PlayerEditBookEvent.class);
 		classHashMap.put("player-egg", PlayerEggThrowEvent.class);
 		classHashMap.put("player-fish", PlayerFishEvent.class);
-		classHashMap.put("player-eat", BlockBreakEvent.class);
-		classHashMap.put("player-join", BlockBreakEvent.class);
-		classHashMap.put("player-move", BlockBreakEvent.class);
+		classHashMap.put("player-eat", PlayerItemConsumeEvent.class);
+		classHashMap.put("player-join", PlayerJoinEvent.class);
+		classHashMap.put("player-move", PlayerMoveEvent.class);
 
-		classHashMap.put("portal-create", BlockBreakEvent.class);
+		classHashMap.put("portal-create", PortalCreateEvent.class);
 
-		classHashMap.put("vehicle-move", BlockBreakEvent.class);
+		classHashMap.put("vehicle-move", VehicleMoveEvent.class);
 
-		classHashMap.put("world-change", BlockBreakEvent.class);
+		classHashMap.put("world-change", PlayerChangedWorldEvent.class);
 
 		return classHashMap;
 	}

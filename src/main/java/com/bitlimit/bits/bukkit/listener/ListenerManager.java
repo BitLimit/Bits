@@ -56,6 +56,8 @@ public class ListenerManager
 		List<Class<Event>> classesToMonitor = ConfigurationManager.getSharedManager().getMonitoredEventClasses();
 		ListIterator<Class<Event>> classListIterator = classesToMonitor.listIterator();
 
+		System.out.println(classesToMonitor.toString());
+
 		while (classListIterator.hasNext())
 		{
 			Class<Event> eventClass = classListIterator.next();
@@ -71,6 +73,11 @@ public class ListenerManager
 
 	private static EventListener listenerForEventClass(Class<Event> eventClass)
 	{
+		if (eventClass == null)
+		{
+			return null;
+		}
+
 		if (eventClass.equals(BlockBreakEvent.class))
 		{
 			return new BlockBreakListener();
