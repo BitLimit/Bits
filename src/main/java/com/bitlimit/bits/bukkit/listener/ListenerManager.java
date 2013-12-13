@@ -46,6 +46,11 @@ public class ListenerManager
 		this.loadFromConfig();
 	}
 
+	public void initialize()
+	{
+
+	}
+
 	private void loadFromConfig()
 	{
 		List<Class<Event>> classesToMonitor = ConfigurationManager.getSharedManager().getMonitoredEventClasses();
