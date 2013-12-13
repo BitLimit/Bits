@@ -148,6 +148,8 @@ public class ConfigurationManager
 		classHashMap.put("vehicle-move", BlockBreakEvent.class);
 
 		classHashMap.put("world-change", BlockBreakEvent.class);
+
+		return classHashMap;
 	}
 
 	public List<Class<Event>> getMonitoredEventClasses()
