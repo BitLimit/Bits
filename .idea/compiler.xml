@@ -29,6 +29,9 @@
         <module name="Bits" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Bits" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
 

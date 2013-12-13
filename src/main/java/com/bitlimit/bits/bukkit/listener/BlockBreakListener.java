@@ -13,6 +13,6 @@ public class BlockBreakListener extends EventListener
 {
 	public void onBlockBreakEvent(BlockBreakEvent blockBreakEvent)
 	{
-		this.onEvent();
+		this.onEvent(blockBreakEvent);
 	}
 }

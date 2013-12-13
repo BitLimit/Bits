@@ -22,7 +22,7 @@ public class EventListener implements Listener
 		Bukkit.getPluginManager().registerEvents(this, BitsPlugin.getPlugin());
 	}
 
-	public void onEvent()
+	public void onEvent(Event event)
 	{
 		Pulse.recordCondition(BitsPlugin.getPlugin(), event.getEventName() + " received.", Level.FINEST);
 	}
