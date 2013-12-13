@@ -69,5 +69,7 @@ public class ListenerManager
 		{
 			return new BlockPlaceListener();
 		}
+
+		return null;
 	}
 }
