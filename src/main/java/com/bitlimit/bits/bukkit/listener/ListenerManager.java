@@ -60,7 +60,12 @@ public class ListenerManager
 		{
 			Class<Event> eventClass = classListIterator.next();
 
-			this.eventListeners.put(eventClass, ListenerManager.listenerForEventClass(eventClass));
+			EventListener eventListener = ListenerManager.listenerForEventClass(eventClass);
+
+			if (eventListener != null)
+			{
+				this.eventListeners.put(eventClass, eventListener);
+			}
 		}
 	}
 
