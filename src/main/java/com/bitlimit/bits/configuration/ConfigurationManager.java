@@ -22,7 +22,9 @@ import org.bukkit.plugin.Plugin;
 import java.util.*;
 
 import rx.Observable;
+import rx.util.functions.Action1;
 import rx.util.functions.Func1;
+import rx.util.functions.Func2;
 
 public class ConfigurationManager
 {
@@ -154,31 +156,30 @@ public class ConfigurationManager
 		return classHashMap;
 	}
 
-	public List<Class<Event>> getMonitoredEventClasses()
+	public Observable getMonitoredEventClasses()
 	{
 		Map<String, Object> toMonitorList = this.getGameplayMechanicsSection().getConfigurationSection("monitor").getValues(false);
-		HashMap<String, Class> classMap = ConfigurationManager.getEventClassAssociations();
 
-//		ArrayList<Class<Event>> eventClasses = new ArrayList<Class<Event>>();
-
-		Observable.from(toMonitorList).filter(new Func1<Map<String, Object>, Boolean>()
+		return Observable.zip(Observable.from(toMonitorList.keySet()), Observable.from(toMonitorList.values()), new Func2()
 		{
-			public Boolean call(Map<String, Object> stringObjectMap)
+			public Object call(Object o, Object o2)
 			{
-				System.out.println("sup " + stringObjectMap.toString());
-				return null;  //To change body of implemented methods use File | Settings | File Templates.
+				return new Object[]{o, o2};
+			}
+		}).filter(new Func1()
+		{
+			public Boolean call(Object o)
+			{
+				Object[] objects = (Object[]) o;
+				return (objects[1] == Boolean.TRUE);
+			}
+		}).map(new Func1()
+		{
+			public Object call(Object o)
+			{
+				String friendlyName = (String)((Object[])o)[0];
+				return ConfigurationManager.getEventClassAssociations().get(friendlyName);
 			}
 		});
-
-
-//		ListIterator monitorIterator = toMonitorList.listIterator();
-//
-//		while (monitorIterator.hasNext())
-//		{
-//			String monitor = (String)monitorIterator.next();
-//			eventClasses.add(classMap.get(monitor));
-//		}
-
-		return null;
 	}
 }
