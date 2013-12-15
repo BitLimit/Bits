@@ -39,6 +39,7 @@ public class ConfigurationManager
 	protected ConfigurationManager()
 	{
 		this.plugin = Bukkit.getPluginManager().getPlugin("Bits");
+		this.plugin.saveDefaultConfig();
 
 		this.fileConfiguration = this.plugin.getConfig();
 		this.plugin.getConfig().options().copyDefaults(true);
