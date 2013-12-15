@@ -1,5 +1,9 @@
 package com.bitlimit.bits.bukkit.listener;
 
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
+import org.bukkit.event.block.BlockPlaceEvent;
+
 /**
  * Created with IntelliJ IDEA.
  * User: kolin
@@ -9,4 +13,9 @@ package com.bitlimit.bits.bukkit.listener;
  */
 public class BlockPlaceListener extends EventListener
 {
+	@EventHandler(priority = EventPriority.LOW, ignoreCancelled = true)
+	public void onBlockPlaceEvent(BlockPlaceEvent blockPlaceEvent)
+	{
+		this.onEvent(blockPlaceEvent);
+	}
 }

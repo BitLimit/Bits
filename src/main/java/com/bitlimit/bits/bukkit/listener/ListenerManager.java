@@ -6,6 +6,11 @@ import org.bukkit.event.Event;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
+import rx.Observable;
+import rx.util.functions.Action1;
+import rx.util.functions.Func1;
+import rx.util.functions.Func2;
+
 
 import java.util.HashMap;
 import java.util.List;
@@ -54,33 +59,16 @@ public class ListenerManager
 
 	private void loadFromConfig()
 	{
-		List<Class<Event>> classesToMonitor = ConfigurationManager.getSharedManager().getMonitoredEventClasses();
+		final HashMap<Class, EventListener> eventListenerHashMap = this.eventListeners;
 
-		if (classesToMonitor == null)
+		ConfigurationManager.getSharedManager().getMonitoredEventClasses().subscribe(new Action1()
 		{
-			return;
-		}
-
-		ListIterator<Class<Event>> classListIterator = classesToMonitor.listIterator();
-
-		while (classListIterator.hasNext())
-		{
-			Class<Event> eventClass = classListIterator.next();
-
-			if (eventClass != null)
+			public void call(Object o)
 			{
-				EventListener eventListener = ListenerManager.listenerForEventClass(eventClass);
-
-				System.out.println(eventClass.toString());
-
-				if (eventListener != null)
-				{
-					System.out.println(eventListener.toString());
-
-					this.eventListeners.put(eventClass, eventListener);
-				}
+				Class<Event> eventClass = (Class<Event>)o;
+				eventListenerHashMap.put(eventClass, ListenerManager.listenerForEventClass(eventClass));
 			}
-		}
+		});
 	}
 
 	private static EventListener listenerForEventClass(Class<Event> eventClass)
