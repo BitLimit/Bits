@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b1c196c-c742-4a3d-8979-7e7a30829a40" name="Default" comment="" />
+    <list default="true" id="5b1c196c-c742-4a3d-8979-7e7a30829a40" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javalite_activejdbc_1_4_8.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javalite_javalite_common_1_4_8.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PlayerAccount.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/RewardTransaction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Bits.iml" afterPath="$PROJECT_DIR$/Bits.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Bits.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387066250900" ignored="false" />
@@ -25,6 +32,8 @@
     <file path="/Listener.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386734152418" ignored="false" />
     <file path="/ListenerManager.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387064746609" ignored="false" />
     <file path="/EventListener.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387064879462" ignored="false" />
+    <file path="/RewardTransaction.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387150434331" ignored="false" />
+    <file path="/PlayerAccount.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387152449496" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,10 +114,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersistentStoreCoordinator.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PersistentStoreCoordinator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="39" selection-start="1445" selection-end="1445" vertical-scroll-proportion="0.75194466">
+            <state line="65" column="39" selection-start="1445" selection-end="1445" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RewardTransaction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/RewardTransaction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="13" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerAccount.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PlayerAccount.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="40" selection-start="273" selection-end="273" vertical-scroll-proportion="0.14102565">
               <folding />
             </state>
           </provider>
@@ -190,6 +217,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/EventListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/configuration/ConfigurationManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/RewardTransaction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PlayerAccount.java" />
       </list>
     </option>
   </component>
@@ -639,18 +668,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Pulse/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="79" selection-start="1406" selection-end="1406" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="25" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="16" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
@@ -747,7 +764,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="39" selection-start="1445" selection-end="1445" vertical-scroll-proportion="0.75194466">
+        <state line="65" column="39" selection-start="1445" selection-end="1445" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/RewardTransaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PlayerAccount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="40" selection-start="273" selection-end="273" vertical-scroll-proportion="0.14102565">
           <folding />
         </state>
       </provider>
