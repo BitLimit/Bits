@@ -7,10 +7,7 @@ import org.bukkit.plugin.Plugin;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 import java.util.logging.Level;
 
 public class PersistentStoreCoordinator
@@ -41,8 +38,7 @@ public class PersistentStoreCoordinator
 
 	private final Plugin plugin;
 
-	private final ThreadPoolExecutor threadPoolExecutor;
-	private final ArrayBlockingQueue<Runnable> blockingQueue;
+	private final ExecutorService executorService;
 
 	/*
 	 *
@@ -54,20 +50,17 @@ public class PersistentStoreCoordinator
 	{
 		this.plugin = Bukkit.getPluginManager().getPlugin("Bits");
 
-		this.blockingQueue = new ArrayBlockingQueue<Runnable>(2048);
-		this.threadPoolExecutor = new ThreadPoolExecutor(4, 4, 16, TimeUnit.SECONDS, this.blockingQueue);
-		this.threadPoolExecutor.setThreadFactory(new ThreadFactory()
+		this.executorService = Executors.newCachedThreadPool(new ThreadFactory()
 		{
 			public Thread newThread(Runnable runnable)
 			{
 				return new PersistenceThread(runnable);
 			}
 		});
-
 	}
 
 	public void executePersistenceRunnable(PersistenceRunnable runnable)
 	{
-		this.threadPoolExecutor.execute(runnable);
+		this.executorService.submit(runnable);
 	}
 }

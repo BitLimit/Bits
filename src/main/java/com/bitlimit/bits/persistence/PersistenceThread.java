@@ -14,5 +14,23 @@ public class PersistenceThread extends Thread
 		super(target);
 	}
 
+	@Override
+	public void run()
+	{
+		this.setup();
 
+		super.run();
+
+		this.cleanup();
+	}
+
+	private void setup()
+	{
+		/* Create a database connection for the runnables to use. */
+	}
+
+	private void cleanup()
+	{
+		/* Close the shared database connection. */
+	}
 }

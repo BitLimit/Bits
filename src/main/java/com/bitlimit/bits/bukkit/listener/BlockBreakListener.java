@@ -1,5 +1,7 @@
 package com.bitlimit.bits.bukkit.listener;
 
+import com.bitlimit.bits.persistence.PersistenceRunnable;
+import com.bitlimit.bits.persistence.PersistentStoreCoordinator;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.block.BlockBreakEvent;
@@ -17,5 +19,14 @@ public class BlockBreakListener extends EventListener
 	public void onBlockBreakEvent(BlockBreakEvent blockBreakEvent)
 	{
 		this.onEvent(blockBreakEvent);
+
+		PersistentStoreCoordinator.getSharedCoordinator().executePersistenceRunnable(new PersistenceRunnable()
+		{
+			@Override
+			public void run()
+			{
+				System.out.println("work");
+			}
+		});
 	}
 }
