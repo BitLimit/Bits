@@ -7,6 +7,10 @@ import org.bukkit.plugin.Plugin;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
 public class PersistentStoreCoordinator
@@ -36,7 +40,9 @@ public class PersistentStoreCoordinator
 	 */
 
 	private final Plugin plugin;
-	private final Connection connection;
+
+	private final ThreadPoolExecutor threadPoolExecutor;
+	private final ArrayBlockingQueue<Runnable> blockingQueue;
 
 	/*
 	 *
@@ -48,24 +54,20 @@ public class PersistentStoreCoordinator
 	{
 		this.plugin = Bukkit.getPluginManager().getPlugin("Bits");
 
-		Connection connection;
-
-		try
+		this.blockingQueue = new ArrayBlockingQueue<Runnable>(2048);
+		this.threadPoolExecutor = new ThreadPoolExecutor(4, 4, 16, TimeUnit.SECONDS, this.blockingQueue);
+		this.threadPoolExecutor.setThreadFactory(new ThreadFactory()
 		{
-			Pulse.recordCondition(this.plugin, "connecting to database.", Level.FINEST);
+			public Thread newThread(Runnable runnable)
+			{
+				return new PersistenceThread(runnable);
+			}
+		});
 
-			connection = DriverManager.getConnection(ConfigurationManager.getSharedManager().getPostgresURI(), ConfigurationManager.getSharedManager().getPostgresUsername(), ConfigurationManager.getSharedManager().getPostgresPassword());
-
-			Pulse.recordCondition(this.plugin, "connected to database.", Level.FINE);
-		}
-		catch (Exception e)
-		{
-			Pulse.recordCondition(this.plugin, "failed to connect to database.", Level.SEVERE);
-
-			connection = null;
-		}
-
-		this.connection = connection;
 	}
 
+	public void executePersistenceRunnable(PersistenceRunnable runnable)
+	{
+		this.threadPoolExecutor.execute(runnable);
+	}
 }
