@@ -29,7 +29,7 @@ public class BlockBreakListener extends EventListener
 				System.out.println("sup yung muny");
 
 				RewardTransaction rewardTransaction = new RewardTransaction();
-				rewardTransaction.set("id", RewardTransaction.count() + 1);
+				rewardTransaction.set("name", "test");
 				rewardTransaction.insert();
 
 				System.out.println("Count. " + RewardTransaction.count());
