@@ -1,5 +1,8 @@
 package com.bitlimit.bits.persistence;
 
+import com.bitlimit.bits.configuration.ConfigurationManager;
+import org.javalite.activejdbc.Base;
+
 /**
  * Created with IntelliJ IDEA.
  * User: kolin
@@ -27,10 +30,14 @@ public class PersistenceThread extends Thread
 	private void setup()
 	{
 		/* Create a database connection for the runnables to use. */
+		ConfigurationManager configurationManager = ConfigurationManager.getSharedManager();
+
+		Base.open("org.postgresql.Driver", configurationManager.getPostgresURI(), configurationManager.getPostgresUsername(), configurationManager.getPostgresPassword());
 	}
 
 	private void cleanup()
 	{
 		/* Close the shared database connection. */
+		Base.close();
 	}
 }
