@@ -50,7 +50,7 @@ public class PersistentStoreCoordinator
 	{
 		this.plugin = Bukkit.getPluginManager().getPlugin("Bits");
 
-		this.executorService = Executors.newCachedThreadPool(new ThreadFactory()
+		this.executorService = Executors.newFixedThreadPool(4, new ThreadFactory()
 		{
 			public Thread newThread(Runnable runnable)
 			{
