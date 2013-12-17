@@ -3,6 +3,10 @@ package com.bitlimit.bits.persistence;
 import com.bitlimit.bits.configuration.ConfigurationManager;
 import com.bitlimit.pulse.Pulse;
 import org.bukkit.Bukkit;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
+import org.bukkit.event.Listener;
+import org.bukkit.event.server.PluginDisableEvent;
 import org.bukkit.plugin.Plugin;
 
 import java.sql.Connection;
@@ -10,7 +14,7 @@ import java.sql.DriverManager;
 import java.util.concurrent.*;
 import java.util.logging.Level;
 
-public class PersistentStoreCoordinator
+public class PersistentStoreCoordinator implements Listener
 {
 	/*
 	 *
@@ -49,6 +53,7 @@ public class PersistentStoreCoordinator
 	protected PersistentStoreCoordinator()
 	{
 		this.plugin = Bukkit.getPluginManager().getPlugin("Bits");
+		Bukkit.getPluginManager().registerEvents(this, this.plugin);
 
 		this.executorService = Executors.newFixedThreadPool(4, new ThreadFactory()
 		{
@@ -57,6 +62,15 @@ public class PersistentStoreCoordinator
 				return new PersistenceThread(runnable);
 			}
 		});
+	}
+
+	@EventHandler (priority = EventPriority.NORMAL, ignoreCancelled = true)
+	public void onPluginDisableEvent(PluginDisableEvent pluginDisableEvent)
+	{
+		if (!this.executorService.isShutdown())
+		{
+			this.executorService.shutdown();
+		}
 	}
 
 	public void executePersistenceRunnable(PersistenceRunnable runnable)
