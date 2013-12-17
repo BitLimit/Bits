@@ -2,6 +2,7 @@ package com.bitlimit.bits.bukkit.listener;
 
 import com.bitlimit.bits.persistence.PersistenceRunnable;
 import com.bitlimit.bits.persistence.PersistentStoreCoordinator;
+import com.bitlimit.bits.persistence.RewardTransaction;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.block.BlockBreakEvent;
@@ -25,7 +26,8 @@ public class BlockBreakListener extends EventListener
 			@Override
 			public void run()
 			{
-				System.out.println("work");
+				RewardTransaction rewardTransaction = new RewardTransaction();
+				rewardTransaction.saveIt();
 			}
 		});
 	}
