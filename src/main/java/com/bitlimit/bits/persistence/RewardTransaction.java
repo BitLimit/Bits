@@ -11,4 +11,8 @@ import org.javalite.activejdbc.Model;
  */
 public class RewardTransaction extends Model
 {
+	public RewardTransaction()
+	{
+
+	}
 }

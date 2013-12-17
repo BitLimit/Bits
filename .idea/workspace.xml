@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b1c196c-c742-4a3d-8979-7e7a30829a40" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PeerTransaction.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PlayerAccount.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/ServerMarket.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/RewardTransaction.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/RewardTransaction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Bits.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387066250900" ignored="false" />
+    <file path="/Dummy.txt" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387267468819" ignored="false" />
     <file path="/BitsPlugin.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386992738028" ignored="false" />
     <file path="$PROJECT_DIR$/../Pulse/src/main/java/com/bitlimit/pulse/bukkit/PulsePlugin.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387066438742" ignored="false" />
     <file path="/PulsePlugin.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387066394731" ignored="false" />
@@ -23,12 +27,12 @@
     <file path="/sample.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386638854280" ignored="false" />
     <file path="/PersistentStoreCoordinator.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387257930777" ignored="false" />
     <file path="/ConfigurationManager.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387066135339" ignored="false" />
-    <file path="/BlockBreakListener.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387259417695" ignored="false" />
+    <file path="/BlockBreakListener.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387269190539" ignored="false" />
     <file path="/BlockPlaceListener.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387065567162" ignored="false" />
     <file path="/Listener.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386734152418" ignored="false" />
     <file path="/ListenerManager.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387064746609" ignored="false" />
     <file path="/EventListener.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387064879462" ignored="false" />
-    <file path="/RewardTransaction.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387150434331" ignored="false" />
+    <file path="/RewardTransaction.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387268027758" ignored="false" />
     <file path="/PlayerAccount.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387152449496" ignored="false" />
     <file path="/PeerTransaction.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387152558973" ignored="false" />
     <file path="/ServerMarket.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387152683208" ignored="false" />
@@ -50,7 +54,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -85,6 +88,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -98,11 +102,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/ListenerManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="67" column="107" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1318#1519#0" expanded="true" />
-                <element signature="e#1514#1515#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -110,11 +110,8 @@
       <file leaf-file-name="PersistentStoreCoordinator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="21" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1222#1349#0" expanded="true" />
-                <element signature="e#1344#1345#0" expanded="true" />
-              </folding>
+            <state line="76" column="30" selection-start="1667" selection-end="1667" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -140,10 +137,8 @@
       <file leaf-file-name="PersistenceThread.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistenceThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="21" selection-start="922" selection-end="922" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="34" column="29" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -151,34 +146,16 @@
       <file leaf-file-name="BlockBreakListener.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="43" selection-start="974" selection-end="974" vertical-scroll-proportion="0.42203987">
+            <state line="38" column="36" selection-start="1160" selection-end="1160" vertical-scroll-proportion="0.57894737">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerAccount.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PlayerAccount.java">
+      <file leaf-file-name="RewardTransaction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/RewardTransaction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="21" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PeerTransaction.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PeerTransaction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="42" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServerMarket.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/ServerMarket.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="17" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
+            <state line="13" column="11" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -209,7 +186,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockPlaceListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/EventListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/configuration/ConfigurationManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/RewardTransaction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PlayerAccount.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PeerTransaction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/ServerMarket.java" />
@@ -217,6 +193,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistenceRunnable.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistenceThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/RewardTransaction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java" />
       </list>
     </option>
@@ -249,7 +226,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="2" />
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -264,20 +241,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bits" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bits" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -441,6 +404,20 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -456,12 +433,12 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -476,19 +453,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -517,6 +481,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -585,7 +562,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.05641422" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -596,6 +572,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.05641422" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -703,35 +680,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/RewardTransaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PlayerAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="21" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PeerTransaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="42" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/ListenerManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="67" column="107" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1318#1519#0" expanded="true" />
-            <element signature="e#1514#1515#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -742,25 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="21" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1222#1349#0" expanded="true" />
-            <element signature="e#1344#1345#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistenceThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="21" selection-start="922" selection-end="922" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistenceRunnable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="11" selection-start="554" selection-end="554" vertical-scroll-proportion="0.0">
@@ -768,16 +701,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/ServerMarket.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/RewardTransaction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="17" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
+        <state line="13" column="11" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistenceThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="29" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="30" selection-start="1667" selection-end="1667" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="43" selection-start="974" selection-end="974" vertical-scroll-proportion="0.42203987">
+        <state line="38" column="36" selection-start="1160" selection-end="1160" vertical-scroll-proportion="0.57894737">
           <folding />
         </state>
       </provider>
