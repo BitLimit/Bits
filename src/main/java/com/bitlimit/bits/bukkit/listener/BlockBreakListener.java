@@ -26,13 +26,20 @@ public class BlockBreakListener extends EventListener
 			@Override
 			public void run()
 			{
-				System.out.println("sup yung muny");
-
-				RewardTransaction rewardTransaction = new RewardTransaction();
+				RewardTransaction rewardTransaction = RewardTransaction.create();
 				rewardTransaction.set("name", "test");
-				rewardTransaction.insert();
 
-				System.out.println("Count. " + RewardTransaction.count());
+				try
+				{
+					rewardTransaction.saveIt();
+				}
+				catch (Exception e)
+				{
+					System.out.println("EXCEPTION: " + e.toString());
+				}
+				finally {
+
+				}
 			}
 		});
 	}

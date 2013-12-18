@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5b1c196c-c742-4a3d-8979-7e7a30829a40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Bits.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,7 +25,7 @@
     <file path="/sample.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386638854280" ignored="false" />
     <file path="/PersistentStoreCoordinator.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387257930777" ignored="false" />
     <file path="/ConfigurationManager.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387066135339" ignored="false" />
-    <file path="/BlockBreakListener.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387269190539" ignored="false" />
+    <file path="/BlockBreakListener.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387294309221" ignored="false" />
     <file path="/BlockPlaceListener.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387065567162" ignored="false" />
     <file path="/Listener.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1386734152418" ignored="false" />
     <file path="/ListenerManager.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387064746609" ignored="false" />
@@ -132,7 +135,7 @@
       <file leaf-file-name="PersistenceThread.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistenceThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="29" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
+            <state line="33" column="63" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -141,7 +144,7 @@
       <file leaf-file-name="BlockBreakListener.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="37" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.47368422">
+            <state line="40" column="20" selection-start="1148" selection-end="1148" vertical-scroll-proportion="0.6546135">
               <folding />
             </state>
           </provider>
@@ -203,8 +206,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1066" />
-    <option name="y" value="133" />
+    <option name="x" value="186" />
+    <option name="y" value="22" />
     <option name="width" value="1280" />
     <option name="height" value="1024" />
   </component>
@@ -543,7 +546,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1066" y="133" width="1280" height="1024" extended-state="0" />
+    <frame x="186" y="22" width="1280" height="1024" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -557,17 +560,17 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.05641593" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2771475" sideWeight="0.94358575" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2771475" sideWeight="0.9435841" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.05641422" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -703,13 +706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistenceThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="29" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="76" column="30" selection-start="1667" selection-end="1667" vertical-scroll-proportion="0.0">
@@ -717,9 +713,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistenceThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="63" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="37" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.47368422">
+        <state line="40" column="20" selection-start="1148" selection-end="1148" vertical-scroll-proportion="0.6546135">
           <folding />
         </state>
       </provider>
