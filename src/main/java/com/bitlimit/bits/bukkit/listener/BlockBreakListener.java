@@ -3,6 +3,7 @@ package com.bitlimit.bits.bukkit.listener;
 import com.bitlimit.bits.persistence.PersistenceRunnable;
 import com.bitlimit.bits.persistence.PersistentStoreCoordinator;
 import com.bitlimit.bits.persistence.RewardTransaction;
+import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.block.BlockBreakEvent;
