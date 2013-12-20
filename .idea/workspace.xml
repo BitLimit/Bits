@@ -139,7 +139,7 @@
       <file leaf-file-name="BlockBreakListener.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="1015" selection-end="1015" vertical-scroll-proportion="0.4385965">
+            <state line="30" column="30" selection-start="990" selection-end="990" vertical-scroll-proportion="0.42105263">
               <folding />
             </state>
           </provider>
@@ -745,7 +745,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="1015" selection-end="1015" vertical-scroll-proportion="0.4385965">
+        <state line="30" column="30" selection-start="990" selection-end="990" vertical-scroll-proportion="0.42105263">
           <folding />
         </state>
       </provider>
