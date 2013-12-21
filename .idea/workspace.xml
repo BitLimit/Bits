@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b1c196c-c742-4a3d-8979-7e7a30829a40" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerDeath.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerKill.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerServerRecord.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerStatistic.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/RecentTransaction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Server.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/RewardTransaction.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Market.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meta/Database Setup.txt" afterPath="$PROJECT_DIR$/meta/Database Setup.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java" />
     </list>
     <ignored path="Bits.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,7 +39,7 @@
     <file path="/Server.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387665583774" ignored="false" />
     <file path="/Market.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387665597039" ignored="false" />
     <file path="/RecentTransaction.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387665732183" ignored="false" />
-    <file path="/Player.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387665751793" ignored="false" />
+    <file path="/Player.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387668976566" ignored="false" />
     <file path="/PlayerStatistic.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387665770746" ignored="false" />
     <file path="/PlayerServerRecord.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387665790064" ignored="false" />
     <file path="/PlayerKill.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387665800470" ignored="false" />
@@ -150,8 +141,10 @@
       <file leaf-file-name="Player.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="33" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="29" column="39" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -195,7 +188,7 @@
       <file leaf-file-name="BlockBreakListener.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="28" selection-start="876" selection-end="876" vertical-scroll-proportion="0.3859649">
+            <state line="28" column="16" selection-start="877" selection-end="877" vertical-scroll-proportion="0.40350878">
               <folding />
             </state>
           </provider>
@@ -229,11 +222,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Server.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Market.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/RecentTransaction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerStatistic.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerServerRecord.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerKill.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerDeath.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java" />
       </list>
     </option>
@@ -789,13 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="33" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerStatistic.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="42" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
@@ -824,9 +810,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="39" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="28" selection-start="876" selection-end="876" vertical-scroll-proportion="0.3859649">
+        <state line="28" column="16" selection-start="877" selection-end="877" vertical-scroll-proportion="0.40350878">
           <folding />
         </state>
       </provider>
