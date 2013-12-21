@@ -1,4 +1,4 @@
-package com.bitlimit.bits.persistence;
+package com.bitlimit.bits.persistence.model;
 
 import org.javalite.activejdbc.Model;
 
