@@ -19,6 +19,8 @@ SET check_function_bodies = false;
 CREATE TABLE public.servers(
 	id serial,
 	name varchar(64) NOT NULL,
+	created_at timestamp,
+	updated_at timestamp,
 	CONSTRAINT id PRIMARY KEY (id)
 
 );
@@ -32,6 +34,8 @@ CREATE TABLE public.markets(
 	id serial,
 	saturation_multiplier numeric NOT NULL DEFAULT 1,
 	id_servers integer,
+	created_at timestamp,
+	updated_at timestamp,
 	CONSTRAINT id_3 PRIMARY KEY (id)
 
 );
@@ -47,7 +51,8 @@ CREATE TABLE public.recent_transactions(
 	awarded_value numeric(16) NOT NULL,
 	id_markets integer NOT NULL,
 	id_players integer NOT NULL,
-	occurred_at timestamp NOT NULL,
+	created_at timestamp,
+	updated_at timestamp,
 	CONSTRAINT id_2 PRIMARY KEY (id)
 
 );
@@ -65,6 +70,8 @@ CREATE TABLE public.players(
 	bits numeric(16) DEFAULT 0,
 	id serial,
 	id_player_server_records integer,
+	created_at timestamp,
+	updated_at timestamp,
 	CONSTRAINT id_1 PRIMARY KEY (id)
 
 );
@@ -80,6 +87,8 @@ ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
 CREATE TABLE public.player_server_records(
 	id serial,
 	id_servers integer,
+	created_at timestamp,
+	updated_at timestamp,
 	CONSTRAINT id_2_1 PRIMARY KEY (id)
 
 );
@@ -98,6 +107,8 @@ CREATE TABLE public.player_statistics(
 	value numeric NOT NULL,
 	id_player_server_records integer NOT NULL,
 	id_players integer NOT NULL,
+	created_at timestamp,
+	updated_at timestamp,
 	CONSTRAINT id_1_1 PRIMARY KEY (id)
 
 );
@@ -120,6 +131,8 @@ ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
 CREATE TABLE public.player_kills(
 	id serial,
 	id_player_server_records integer NOT NULL,
+	created_at timestamp,
+	updated_at timestamp,
 	CONSTRAINT id_2_1_1 PRIMARY KEY (id)
 
 );
@@ -129,6 +142,8 @@ CREATE TABLE public.player_deaths(
 	id serial,
 	id_player_kills integer,
 	id_player_server_records integer NOT NULL,
+	created_at timestamp,
+	updated_at timestamp,
 	CONSTRAINT id_1_1_1 PRIMARY KEY (id)
 
 );
