@@ -23,8 +23,6 @@ public class Server extends Model
 			server.insert();
 
 			Market serverMarket = new Market();
-			serverMarket.set("saturation_multiplier", 1);
-//			serverMarket.set("volume", 0);
 			serverMarket.insert();
 
 			serverMarket.add(server);

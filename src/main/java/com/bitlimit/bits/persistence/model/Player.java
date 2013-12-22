@@ -1,5 +1,6 @@
 package com.bitlimit.bits.persistence.model;
 
+import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.javalite.activejdbc.Model;
 
@@ -18,7 +19,7 @@ public class Player extends Model
 	 *
 	 */
 
-	public static Player getPlayerForBukkitPlayer(OfflinePlayer offlinePlayer)
+	public static Player getPlayerForBukkitPlayer(final OfflinePlayer offlinePlayer)
 	{
 		String playerName = offlinePlayer.getName();
 		Player player = Player.findFirst("name = ?", playerName);
@@ -30,11 +31,13 @@ public class Player extends Model
 			player = new Player();
 			player.set("name", playerName);
 
-			player.saveIt();
+			player.insert();
 
-//			PlayerServerRecord playerServerRecord = new PlayerServerRecord();
-//			playerServerRecord.setParent(Server.getCurrentServer());
-//			playerServerRecord.saveIt();
+			PlayerServerRecord playerServerRecord = new PlayerServerRecord();
+			playerServerRecord.insert();
+
+			player.add(playerServerRecord);
+			player.save();
 		}
 
 		return player;
