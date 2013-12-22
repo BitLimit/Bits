@@ -64,21 +64,6 @@ public class PersistentStoreCoordinator implements Listener
 				return new PersistenceThread(runnable);
 			}
 		});
-
-		this.executePersistenceRunnable(new PersistenceRunnable()
-		{
-			@Override
-			public void run()
-			{
-				Server server = Server.findFirst("name = ?", Bukkit.getServerName());
-
-				Market market = new Market();
-				market.insert();
-
-				server.add(market);
-				server.insert();
-			}
-		});
 	}
 
 	@EventHandler (priority = EventPriority.NORMAL, ignoreCancelled = true)
