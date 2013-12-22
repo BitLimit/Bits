@@ -20,12 +20,14 @@ public class Server extends Model
 		{
 			server = new Server();
 			server.set("name", serverName);
+			server.insert();
 
 			Market serverMarket = new Market();
+			serverMarket.set("saturation_multiplier", 1);
+//			serverMarket.set("volume", 0);
 			serverMarket.insert();
 
-			server.add(serverMarket);
-			server.insert();
+			serverMarket.add(server);
 		}
 
 		return server;

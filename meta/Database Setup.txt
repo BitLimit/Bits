@@ -1,5 +1,5 @@
 -- Database generated with pgModeler (PostgreSQL Database Modeler).
--- PostgreSQL version: 9.3
+-- PostgreSQL version: 9.1
 -- Project Site: pgmodeler.com.br
 -- Model Author: ---
 
@@ -21,7 +21,7 @@ CREATE TABLE public.servers(
 	name varchar(64) NOT NULL,
 	CONSTRAINT id PRIMARY KEY (id)
 
-)WITH ( OIDS = TRUE );
+);
 -- ddl-end --
 COMMENT ON COLUMN public.servers.name IS 'Derived from server.properties.';
 -- ddl-end --
@@ -30,8 +30,8 @@ COMMENT ON COLUMN public.servers.name IS 'Derived from server.properties.';
 -- object: public.markets | type: TABLE --
 CREATE TABLE public.markets(
 	id serial,
-	id_servers integer,
 	saturation_multiplier numeric NOT NULL DEFAULT 1,
+	id_servers integer,
 	CONSTRAINT id_3 PRIMARY KEY (id)
 
 );
@@ -40,25 +40,13 @@ COMMENT ON TABLE public.markets IS 'Used for dynamic valuation.';
 -- ddl-end --
 -- ddl-end --
 
--- object: servers_fk | type: CONSTRAINT --
-ALTER TABLE public.markets ADD CONSTRAINT servers_fk FOREIGN KEY (id_servers)
-REFERENCES public.servers (id) MATCH FULL
-ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
--- ddl-end --
-
-
--- object: markets_uq | type: CONSTRAINT --
-ALTER TABLE public.markets ADD CONSTRAINT markets_uq UNIQUE (id_servers);
--- ddl-end --
-
-
 -- object: public.recent_transactions | type: TABLE --
 CREATE TABLE public.recent_transactions(
 	id serial,
 	type varchar(64),
 	awarded_value numeric(16) NOT NULL,
 	id_markets integer NOT NULL,
-	username_players varchar(64) NOT NULL,
+	id_players integer NOT NULL,
 	occurred_at timestamp NOT NULL,
 	CONSTRAINT id_2 PRIMARY KEY (id)
 
@@ -73,15 +61,17 @@ ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
 
 -- object: public.players | type: TABLE --
 CREATE TABLE public.players(
-	username varchar(64) NOT NULL,
+	name varchar(64) NOT NULL,
 	bits numeric(16) DEFAULT 0,
-	CONSTRAINT id_1 PRIMARY KEY (username)
+	id serial,
+	id_player_server_records integer,
+	CONSTRAINT id_1 PRIMARY KEY (id)
 
 );
 -- ddl-end --
 -- object: players_fk | type: CONSTRAINT --
-ALTER TABLE public.recent_transactions ADD CONSTRAINT players_fk FOREIGN KEY (username_players)
-REFERENCES public.players (username) MATCH FULL
+ALTER TABLE public.recent_transactions ADD CONSTRAINT players_fk FOREIGN KEY (id_players)
+REFERENCES public.players (id) MATCH FULL
 ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
 -- ddl-end --
 
@@ -90,7 +80,6 @@ ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
 CREATE TABLE public.player_server_records(
 	id serial,
 	id_servers integer,
-	username_players varchar(64) NOT NULL,
 	CONSTRAINT id_2_1 PRIMARY KEY (id)
 
 );
@@ -108,18 +97,11 @@ CREATE TABLE public.player_statistics(
 	type varchar NOT NULL,
 	value numeric NOT NULL,
 	id_player_server_records integer NOT NULL,
-	username_players varchar(64) NOT NULL,
+	id_players integer NOT NULL,
 	CONSTRAINT id_1_1 PRIMARY KEY (id)
 
 );
 -- ddl-end --
--- object: players_fk | type: CONSTRAINT --
-ALTER TABLE public.player_server_records ADD CONSTRAINT players_fk FOREIGN KEY (username_players)
-REFERENCES public.players (username) MATCH FULL
-ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
--- ddl-end --
-
-
 -- object: player_server_records_fk | type: CONSTRAINT --
 ALTER TABLE public.player_statistics ADD CONSTRAINT player_server_records_fk FOREIGN KEY (id_player_server_records)
 REFERENCES public.player_server_records (id) MATCH FULL
@@ -128,8 +110,8 @@ ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
 
 
 -- object: players_fk | type: CONSTRAINT --
-ALTER TABLE public.player_statistics ADD CONSTRAINT players_fk FOREIGN KEY (username_players)
-REFERENCES public.players (username) MATCH FULL
+ALTER TABLE public.player_statistics ADD CONSTRAINT players_fk FOREIGN KEY (id_players)
+REFERENCES public.players (id) MATCH FULL
 ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
 -- ddl-end --
 
@@ -177,7 +159,33 @@ ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
 -- ddl-end --
 
 
+-- object: player_server_records_fk | type: CONSTRAINT --
+ALTER TABLE public.players ADD CONSTRAINT player_server_records_fk FOREIGN KEY (id_player_server_records)
+REFERENCES public.player_server_records (id) MATCH FULL
+ON DELETE SET NULL ON UPDATE CASCADE NOT DEFERRABLE;
+-- ddl-end --
+
+
+-- object: players_uq | type: CONSTRAINT --
+ALTER TABLE public.players ADD CONSTRAINT players_uq UNIQUE (id_player_server_records);
+-- ddl-end --
+
+
+-- object: servers_fk | type: CONSTRAINT --
+ALTER TABLE public.markets ADD CONSTRAINT servers_fk FOREIGN KEY (id_servers)
+REFERENCES public.servers (id) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
+-- ddl-end --
+
+
+-- object: markets_uq | type: CONSTRAINT --
+ALTER TABLE public.markets ADD CONSTRAINT markets_uq UNIQUE (id_servers);
+-- ddl-end --
+
+
+
 -- GENERATED END --
+
 
 
 GRANT ALL ON ALL TABLES IN SCHEMA public TO bits;
