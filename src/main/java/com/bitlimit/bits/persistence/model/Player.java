@@ -12,7 +12,13 @@ import org.javalite.activejdbc.Model;
  */
 public class Player extends Model
 {
-	public static Player playerForBukkitPlayer(OfflinePlayer offlinePlayer)
+	/*
+	 *
+	 *  Designated Constructor
+	 *
+	 */
+
+	public static Player getPlayerForBukkitPlayer(OfflinePlayer offlinePlayer)
 	{
 		String playerName = offlinePlayer.getName();
 		Player player = Player.findFirst("name = ?", playerName);
@@ -21,9 +27,38 @@ public class Player extends Model
 		{
 			player = new Player();
 			player.set("name", playerName);
+
+			PlayerServerRecord playerServerRecord = new PlayerServerRecord();
+			playerServerRecord.insert();
+			player.add(playerServerRecord);
+
 			player.insert();
 		}
 
 		return player;
 	}
+
+	/*
+	 *
+	 *  Statistic Proxies
+	 *
+	 */
+
+	public PlayerServerRecord getPlayerServerRecord()
+	{
+		return this.getAll(PlayerServerRecord.class).get(0);
+	}
+
+	public Integer incrementBlockBreakStatistic()
+	{
+		PlayerServerRecord playerServerRecord = this.getPlayerServerRecord();
+		PlayerStatistic blockBreakStatistic = playerServerRecord.getPlayerStatisticWithType("block-break");
+
+		Integer newValue = blockBreakStatistic.getInteger("block-break") + 1;
+		blockBreakStatistic.set("block-break", newValue);
+
+		return newValue;
+	}
+
+
 }

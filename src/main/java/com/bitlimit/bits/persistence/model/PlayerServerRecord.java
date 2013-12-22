@@ -11,4 +11,19 @@ import org.javalite.activejdbc.Model;
  */
 public class PlayerServerRecord extends Model
 {
+	public PlayerStatistic getPlayerStatisticWithType(String type)
+	{
+		PlayerStatistic playerStatistic = this.get(PlayerStatistic.class, "type = ?", type).get(0);
+
+		if (playerStatistic == null)
+		{
+			playerStatistic = new PlayerStatistic();
+			playerStatistic.set("type", type);
+			playerStatistic.insert();
+
+			this.add(playerStatistic);
+		}
+
+		return playerStatistic;
+	}
 }
