@@ -12,7 +12,7 @@ import org.javalite.activejdbc.Model;
  */
 public class Player extends Model
 {
-	public Player playerForBukkitPlayer(OfflinePlayer offlinePlayer)
+	public static Player playerForBukkitPlayer(OfflinePlayer offlinePlayer)
 	{
 		String playerName = offlinePlayer.getName();
 		Player player = Player.findFirst("name = ?", playerName);

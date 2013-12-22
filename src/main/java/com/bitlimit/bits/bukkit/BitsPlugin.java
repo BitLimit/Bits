@@ -17,15 +17,6 @@ public class BitsPlugin extends JavaPlugin
 		ListenerManager.getListenerManager().initialize();
 
 		Pulse.notePluginCondition(this, PluginCondition.LOADED, true, null);
-
-		PersistentStoreCoordinator.getSharedCoordinator().executePersistenceRunnable(new PersistenceRunnable()
-		{
-			@Override
-			public void run()
-			{
-				Server server = Server
-			}
-		});
 	}
 
 	@Override

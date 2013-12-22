@@ -1,5 +1,6 @@
 package com.bitlimit.bits.persistence.model;
 
+import org.bukkit.Bukkit;
 import org.javalite.activejdbc.Model;
 
 /**
@@ -11,4 +12,21 @@ import org.javalite.activejdbc.Model;
  */
 public class Server extends Model
 {
+	public static Server getServer(String serverName)
+	{
+		Server server = Server.findFirst("name = ?", serverName);
+
+		if (server == null)
+		{
+			server = new Server();
+			server.set("name", serverName);
+		}
+
+		return server;
+	}
+
+	public static Server getCurrentServer()
+	{
+		return getServer(Bukkit.getServerName());
+	}
 }
