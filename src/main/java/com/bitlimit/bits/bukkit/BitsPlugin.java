@@ -29,4 +29,9 @@ public class BitsPlugin extends JavaPlugin
 	{
 		return (BitsPlugin)Bukkit.getPluginManager().getPlugin("Bits");
 	}
+
+	public static String getBitsSymbol()
+	{
+		return "\u2756";
+	}
 }

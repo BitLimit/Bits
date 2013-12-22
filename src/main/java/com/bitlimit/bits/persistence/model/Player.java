@@ -1,6 +1,8 @@
 package com.bitlimit.bits.persistence.model;
 
+import com.bitlimit.bits.bukkit.BitsPlugin;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
 import org.javalite.activejdbc.Model;
 
@@ -38,10 +40,54 @@ public class Player extends Model
 
 			player.add(playerServerRecord);
 			player.save();
+
+			player.sendIntroduction();
 		}
 
 		return player;
 	}
+
+	/*
+	 *
+	 *  Getters
+	 *
+	 */
+
+	public String getName()
+	{
+		return this.getString("name");
+	}
+
+	/*
+	 *
+	 *  Setters
+	 *
+	 */
+
+	public void setName(String name)
+	{
+		this.setString("name", name);
+	}
+
+	/*
+	 *
+	 *  Player-Facing Side
+	 *
+	 */
+
+	private void sendIntroduction()
+	{
+		final Player self = this;
+		Bukkit.getScheduler().scheduleSyncDelayedTask(BitsPlugin.getPlugin(), new Runnable()
+		{
+			public void run()
+			{
+				Bukkit.getPlayer(self.getName()).sendMessage(ChatColor.AQUA + "Welcome to Bits! You've been created an account that pays Bits (" + BitsPlugin.getBitsSymbol() + ") for every action you take in-game.");
+			}
+		});
+	}
+
+
 
 	/*
 	 *
