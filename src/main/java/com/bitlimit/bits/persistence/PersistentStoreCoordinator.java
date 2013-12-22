@@ -1,6 +1,8 @@
 package com.bitlimit.bits.persistence;
 
 import com.bitlimit.bits.configuration.ConfigurationManager;
+import com.bitlimit.bits.persistence.model.Market;
+import com.bitlimit.bits.persistence.model.Server;
 import com.bitlimit.pulse.Pulse;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
@@ -60,6 +62,21 @@ public class PersistentStoreCoordinator implements Listener
 			public Thread newThread(Runnable runnable)
 			{
 				return new PersistenceThread(runnable);
+			}
+		});
+
+		this.executePersistenceRunnable(new PersistenceRunnable()
+		{
+			@Override
+			public void run()
+			{
+				Server server = Server.findFirst("name = ?", Bukkit.getServerName());
+
+				Market market = new Market();
+				market.insert();
+
+				server.add(market);
+				server.insert();
 			}
 		});
 	}
