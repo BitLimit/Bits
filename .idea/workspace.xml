@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b1c196c-c742-4a3d-8979-7e7a30829a40" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerServerRecord.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerServerRecord.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Server.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Server.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Bits.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,12 +38,12 @@
     <file path="/PersistentStoreRunnable.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387152807780" ignored="false" />
     <file path="/PersistenceThread.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387259080322" ignored="false" />
     <file path="/PersistenceRunnable.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387155229154" ignored="false" />
-    <file path="/Server.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387764030360" ignored="false" />
+    <file path="/Server.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387775005943" ignored="false" />
     <file path="/Market.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387763913972" ignored="false" />
     <file path="/RecentTransaction.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387665732183" ignored="false" />
-    <file path="/Player.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387768805674" ignored="false" />
+    <file path="/Player.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387775134656" ignored="false" />
     <file path="/PlayerStatistic.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387665770746" ignored="false" />
-    <file path="/PlayerServerRecord.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387768959060" ignored="false" />
+    <file path="/PlayerServerRecord.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387775501862" ignored="false" />
     <file path="/PlayerKill.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387665800470" ignored="false" />
     <file path="/PlayerDeath.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387665815284" ignored="false" />
     <file path="/a.dummy" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387687530903" ignored="false" />
@@ -105,11 +108,11 @@
       <file leaf-file-name="Player.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="7" selection-start="1273" selection-end="1273" vertical-scroll-proportion="0.0">
+            <state line="51" column="18" selection-start="1355" selection-end="1361" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1526#1784#0" expanded="true" />
-                <element signature="e#1779#1780#0" expanded="true" />
+                <element signature="e#1956#2214#0" expanded="true" />
+                <element signature="e#2209#2210#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -118,7 +121,7 @@
       <file leaf-file-name="PlayerServerRecord.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerServerRecord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="62" selection-start="356" selection-end="356" vertical-scroll-proportion="0.14840183">
+            <state line="14" column="144" selection-start="499" selection-end="499" vertical-scroll-proportion="0.15981735">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -174,7 +177,7 @@
       <file leaf-file-name="Market.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Market.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="28" selection-start="294" selection-end="359" vertical-scroll-proportion="0.0">
+            <state line="14" column="13" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -185,10 +188,19 @@
       <file leaf-file-name="Server.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="75" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0">
+            <state line="40" column="84" selection-start="897" selection-end="897" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Model.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/javalite/activejdbc/1.4.8/activejdbc-1.4.8-sources.jar!/org/javalite/activejdbc/Model.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2189" column="41" selection-start="90301" selection-end="90301" vertical-scroll-proportion="-36.36">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -281,6 +293,46 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="External Libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: org.javalite:activejdbc:1.4.8" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activejdbc-1.4.8.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activejdbc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: org.javalite:activejdbc:1.4.8" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activejdbc-1.4.8.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -706,21 +758,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/configuration/ConfigurationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="40" selection-start="1672" selection-end="1672" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4364#4468#0" expanded="true" />
-            <element signature="e#4463#4464#0" expanded="true" />
-            <element signature="e#4477#4617#0" expanded="true" />
-            <element signature="e#4612#4613#0" expanded="true" />
-            <element signature="e#4623#4815#0" expanded="true" />
-            <element signature="e#4810#4811#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/ListenerManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="67" column="107" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.0">
@@ -756,20 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerKill.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="37" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerDeath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="28" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="118" selection-start="994" selection-end="994" vertical-scroll-proportion="0.0">
@@ -798,9 +821,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/javalite/activejdbc/1.4.8/activejdbc-1.4.8-sources.jar!/org/javalite/activejdbc/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2189" column="41" selection-start="90301" selection-end="90301" vertical-scroll-proportion="-36.36">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerKill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="37" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerDeath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="28" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Market.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="13" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="75" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0">
+        <state line="40" column="84" selection-start="897" selection-end="897" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -809,27 +862,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="7" selection-start="1273" selection-end="1273" vertical-scroll-proportion="0.0">
+        <state line="51" column="18" selection-start="1355" selection-end="1361" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1526#1784#0" expanded="true" />
-            <element signature="e#1779#1780#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Market.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="28" selection-start="294" selection-end="359" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1956#2214#0" expanded="true" />
+            <element signature="e#2209#2210#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerServerRecord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="62" selection-start="356" selection-end="356" vertical-scroll-proportion="0.14840183">
+        <state line="14" column="144" selection-start="499" selection-end="499" vertical-scroll-proportion="0.15981735">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

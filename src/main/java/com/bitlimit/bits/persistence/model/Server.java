@@ -1,7 +1,11 @@
 package com.bitlimit.bits.persistence.model;
 
+import com.bitlimit.bits.bukkit.BitsPlugin;
+import com.bitlimit.pulse.Pulse;
 import org.bukkit.Bukkit;
 import org.javalite.activejdbc.Model;
+
+import java.util.logging.Level;
 
 /**
  * Created with IntelliJ IDEA.
@@ -24,15 +28,30 @@ public class Server extends Model
 
 		if (server == null)
 		{
+			try
+			{
 			server = new Server();
 			server.setName(serverName);
-			server.insert();
+			server.saveIt();
+
+			Pulse.recordCondition(BitsPlugin.getPlugin(), "Created server model object.", Level.FINE);
 
 			Market serverMarket = new Market();
-			serverMarket.insert();
+			serverMarket.set("saturation_multiplier", 1);
+			serverMarket.saveIt();
+
+			Pulse.recordCondition(BitsPlugin.getPlugin(), "Created market model object.", Level.FINER);
 
 			serverMarket.setParent(server);
+
+			System.out.println("set parent");
+
 			serverMarket.saveIt();
+			}
+			catch (Exception e)
+			{
+				System.out.println("E " + e.getLocalizedMessage());
+			}
 		}
 
 		return server;

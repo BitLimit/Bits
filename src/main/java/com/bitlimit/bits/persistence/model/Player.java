@@ -1,10 +1,13 @@
 package com.bitlimit.bits.persistence.model;
 
 import com.bitlimit.bits.bukkit.BitsPlugin;
+import com.bitlimit.pulse.Pulse;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
 import org.javalite.activejdbc.Model;
+
+import java.util.logging.Level;
 
 /**
  * Created with IntelliJ IDEA.
@@ -30,15 +33,25 @@ public class Player extends Model
 		{
 			player = new Player();
 			player.setName(playerName);
-			player.insert();
+			player.saveIt();
+
+			Pulse.recordCondition(BitsPlugin.getPlugin(), "Created player model for " + playerName, Level.FINER);
 
 			PlayerServerRecord playerServerRecord = new PlayerServerRecord();
-			playerServerRecord.insert();
+			playerServerRecord.saveIt();
 
-			playerServerRecord.setParent(Server.getCurrentServer());
+			Pulse.recordCondition(BitsPlugin.getPlugin(), "Created player server record for " + player.toString(), Level.FINER);
+
+			Server server = Server.getCurrentServer();
+			System.out.println("Server " + server);
+			System.out.println("Player " + player);
+
+			playerServerRecord.setParent(server);
+			playerServerRecord.saveIt();
+
 			player.add(playerServerRecord);
+			player.saveIt();
 
-			Server.getCurrentServer();
 
 			player.sendIntroduction();
 		}
