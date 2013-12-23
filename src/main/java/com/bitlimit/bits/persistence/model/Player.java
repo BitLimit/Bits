@@ -40,18 +40,14 @@ public class Player extends Model
 			PlayerServerRecord playerServerRecord = new PlayerServerRecord();
 			playerServerRecord.saveIt();
 
-			Pulse.recordCondition(BitsPlugin.getPlugin(), "Created player server record for " + player.toString(), Level.FINER);
+			Pulse.recordCondition(BitsPlugin.getPlugin(), "Created player server record for " + playerName, Level.FINER);
 
 			Server server = Server.getCurrentServer();
-			System.out.println("Server " + server);
-			System.out.println("Player " + player);
-
 			playerServerRecord.setParent(server);
 			playerServerRecord.saveIt();
 
 			player.add(playerServerRecord);
 			player.saveIt();
-
 
 			player.sendIntroduction();
 		}
@@ -99,7 +95,7 @@ public class Player extends Model
 		{
 			public void run()
 			{
-				Bukkit.getPlayer(self.getName()).sendMessage(ChatColor.AQUA + "Welcome to Bits! You've been created an account that pays Bits (" + BitsPlugin.getBitsSymbol() + ") for every action you take in-game.");
+				Bukkit.getPlayer(self.getName()).sendMessage(ChatColor.AQUA + "Welcome to Bits! You've been created an account that pays Bits (" + BitsPlugin.getBitsSymbol() + ") for every action you take in-game. Type \"/bits tutorial\" for a walkthrough.");
 			}
 		});
 	}
