@@ -69,7 +69,6 @@ CREATE TABLE public.players(
 	name varchar(64) NOT NULL,
 	bits numeric(16) DEFAULT 0,
 	id serial,
-	id_player_server_records integer,
 	created_at timestamp,
 	updated_at timestamp,
 	CONSTRAINT id_1 PRIMARY KEY (id)
@@ -89,6 +88,7 @@ CREATE TABLE public.player_server_records(
 	created_at timestamp,
 	updated_at timestamp,
 	id_servers integer,
+	id_players integer,
 	CONSTRAINT id_2_1 PRIMARY KEY (id)
 
 );
@@ -167,18 +167,6 @@ ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
 -- ddl-end --
 
 
--- object: player_server_records_fk | type: CONSTRAINT --
-ALTER TABLE public.players ADD CONSTRAINT player_server_records_fk FOREIGN KEY (id_player_server_records)
-REFERENCES public.player_server_records (id) MATCH FULL
-ON DELETE SET NULL ON UPDATE CASCADE NOT DEFERRABLE;
--- ddl-end --
-
-
--- object: players_uq | type: CONSTRAINT --
-ALTER TABLE public.players ADD CONSTRAINT players_uq UNIQUE (id_player_server_records);
--- ddl-end --
-
-
 -- object: servers_fk | type: CONSTRAINT --
 ALTER TABLE public.player_server_records ADD CONSTRAINT servers_fk FOREIGN KEY (id_servers)
 REFERENCES public.servers (id) MATCH FULL
@@ -195,6 +183,18 @@ ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
 
 -- object: markets_uq | type: CONSTRAINT --
 ALTER TABLE public.markets ADD CONSTRAINT markets_uq UNIQUE (id_servers);
+-- ddl-end --
+
+
+-- object: players_fk | type: CONSTRAINT --
+ALTER TABLE public.player_server_records ADD CONSTRAINT players_fk FOREIGN KEY (id_players)
+REFERENCES public.players (id) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
+-- ddl-end --
+
+
+-- object: player_server_records_uq | type: CONSTRAINT --
+ALTER TABLE public.player_server_records ADD CONSTRAINT player_server_records_uq UNIQUE (id_players);
 -- ddl-end --
 
 
