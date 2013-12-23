@@ -1,6 +1,7 @@
 package com.bitlimit.bits.persistence.model;
 
 import org.javalite.activejdbc.Model;
+import org.javalite.activejdbc.annotations.BelongsTo;
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,6 +10,8 @@ import org.javalite.activejdbc.Model;
  * Time: 2:43 PM
  * To change this template use File | Settings | File Templates.
  */
+
+@BelongsTo(parent = Player.class, foreignKeyName = "id_players")
 public class PlayerServerRecord extends Model
 {
 	public PlayerStatistic getPlayerStatisticWithType(String type)

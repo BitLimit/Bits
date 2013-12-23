@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b1c196c-c742-4a3d-8979-7e7a30829a40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerServerRecord.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerServerRecord.java" />
     </list>
     <ignored path="Bits.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,7 +40,7 @@
     <file path="/RecentTransaction.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387665732183" ignored="false" />
     <file path="/Player.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387768805674" ignored="false" />
     <file path="/PlayerStatistic.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387665770746" ignored="false" />
-    <file path="/PlayerServerRecord.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387676256668" ignored="false" />
+    <file path="/PlayerServerRecord.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387768959060" ignored="false" />
     <file path="/PlayerKill.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387665800470" ignored="false" />
     <file path="/PlayerDeath.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387665815284" ignored="false" />
     <file path="/a.dummy" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387687530903" ignored="false" />
@@ -102,10 +102,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Player.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Player.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="7" selection-start="1273" selection-end="1273" vertical-scroll-proportion="0.7762557">
+            <state line="68" column="7" selection-start="1273" selection-end="1273" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1526#1784#0" expanded="true" />
@@ -115,11 +115,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerServerRecord.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="PlayerServerRecord.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerServerRecord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="31" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="13" column="62" selection-start="356" selection-end="356" vertical-scroll-proportion="0.14840183">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -172,7 +174,7 @@
       <file leaf-file-name="Market.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Market.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="4" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0">
+            <state line="13" column="28" selection-start="294" selection-end="359" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -219,12 +221,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerKill.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerDeath.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerServerRecord.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Market.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Server.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerServerRecord.java" />
       </list>
     </option>
   </component>
@@ -782,13 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerServerRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="31" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="13" selection-start="827" selection-end="827" vertical-scroll-proportion="0.0">
@@ -803,15 +798,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Market.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="4" selection-start="469" selection-end="469" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Server.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="75" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0">
@@ -823,11 +809,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="7" selection-start="1273" selection-end="1273" vertical-scroll-proportion="0.7762557">
+        <state line="68" column="7" selection-start="1273" selection-end="1273" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1526#1784#0" expanded="true" />
             <element signature="e#1779#1780#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Market.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="28" selection-start="294" selection-end="359" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerServerRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="62" selection-start="356" selection-end="356" vertical-scroll-proportion="0.14840183">
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
