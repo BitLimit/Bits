@@ -86,20 +86,13 @@ ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
 -- object: public.player_server_records | type: TABLE --
 CREATE TABLE public.player_server_records(
 	id serial,
-	id_servers integer,
 	created_at timestamp,
 	updated_at timestamp,
+	id_servers integer,
 	CONSTRAINT id_2_1 PRIMARY KEY (id)
 
 );
 -- ddl-end --
--- object: servers_fk | type: CONSTRAINT --
-ALTER TABLE public.player_server_records ADD CONSTRAINT servers_fk FOREIGN KEY (id_servers)
-REFERENCES public.servers (id) MATCH FULL
-ON DELETE SET NULL ON UPDATE CASCADE NOT DEFERRABLE;
--- ddl-end --
-
-
 -- object: public.player_statistics | type: TABLE --
 CREATE TABLE public.player_statistics(
 	id serial,
@@ -195,6 +188,13 @@ ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
 
 -- object: markets_uq | type: CONSTRAINT --
 ALTER TABLE public.markets ADD CONSTRAINT markets_uq UNIQUE (id_servers);
+-- ddl-end --
+
+
+-- object: servers_fk | type: CONSTRAINT --
+ALTER TABLE public.player_server_records ADD CONSTRAINT servers_fk FOREIGN KEY (id_servers)
+REFERENCES public.servers (id) MATCH FULL
+ON DELETE SET NULL ON UPDATE CASCADE NOT DEFERRABLE;
 -- ddl-end --
 
 

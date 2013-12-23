@@ -12,6 +12,12 @@ import org.javalite.activejdbc.Model;
  */
 public class Server extends Model
 {
+	/*
+	 *
+	 *  Designated Initializers
+	 *
+	 */
+
 	public static Server getServer(String serverName)
 	{
 		Server server = Server.findFirst("name = ?", serverName);
@@ -19,13 +25,14 @@ public class Server extends Model
 		if (server == null)
 		{
 			server = new Server();
-			server.set("name", serverName);
+			server.setName(serverName);
 			server.insert();
 
 			Market serverMarket = new Market();
 			serverMarket.insert();
 
-			serverMarket.add(server);
+			serverMarket.setParent(server);
+			serverMarket.saveIt();
 		}
 
 		return server;
@@ -35,4 +42,27 @@ public class Server extends Model
 	{
 		return getServer(Bukkit.getServerName());
 	}
+
+	/*
+	 *
+	 *  Getters
+	 *
+	 */
+
+	public String getName()
+	{
+		return this.getString("name");
+	}
+
+	/*
+	 *
+	 *  Setters
+	 *
+	 */
+
+	public void setName(String name)
+	{
+		this.setString("name", name);
+	}
+
 }

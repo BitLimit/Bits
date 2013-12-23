@@ -26,20 +26,19 @@ public class Player extends Model
 		String playerName = offlinePlayer.getName();
 		Player player = Player.findFirst("name = ?", playerName);
 
-		Server.getCurrentServer();
-
 		if (player == null)
 		{
 			player = new Player();
-			player.set("name", playerName);
-
+			player.setName(playerName);
 			player.insert();
 
-			PlayerServerRecord playerServerRecord = new PlayerServerRecord();
-			playerServerRecord.insert();
+//			PlayerServerRecord playerServerRecord = new PlayerServerRecord();
+//			playerServerRecord.insert();
+//
+//			playerServerRecord.setParent(Server.getCurrentServer());
+//			player.add(playerServerRecord);
 
-			player.add(playerServerRecord);
-			player.save();
+			Server.getCurrentServer();
 
 			player.sendIntroduction();
 		}

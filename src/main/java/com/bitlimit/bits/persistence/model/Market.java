@@ -1,6 +1,7 @@
 package com.bitlimit.bits.persistence.model;
 
 import org.javalite.activejdbc.Model;
+import org.javalite.activejdbc.annotations.BelongsTo;
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,6 +10,12 @@ import org.javalite.activejdbc.Model;
  * Time: 2:39 PM
  * To change this template use File | Settings | File Templates.
  */
+
+@BelongsTo(parent = Server.class, foreignKeyName = "id_servers")
 public class Market extends Model
 {
+	public Server getServer()
+	{
+		return this.getAll(Server.class).get(0);
+	}
 }
