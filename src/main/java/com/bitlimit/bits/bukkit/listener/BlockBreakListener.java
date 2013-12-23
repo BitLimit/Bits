@@ -28,7 +28,7 @@ public class BlockBreakListener extends EventListener
 			{
 				try
 				{
-					Player.getPlayerForBukkitPlayer(blockBreakEvent.getPlayer()) /* .incrementBlockBreakStatistic() */;
+					Player.getPlayerForBukkitPlayer(blockBreakEvent.getPlayer()).incrementBlockBreakStatistic();
 				}
 				catch (Exception e)
 				{

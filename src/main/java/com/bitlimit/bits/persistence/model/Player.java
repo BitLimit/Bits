@@ -111,10 +111,16 @@ public class Player extends Model
 	public Integer incrementBlockBreakStatistic()
 	{
 		PlayerServerRecord playerServerRecord = this.getPlayerServerRecord();
+
+		System.out.println("got record + " + playerServerRecord.toString());
+
 		PlayerStatistic blockBreakStatistic = playerServerRecord.getPlayerStatisticWithType("block-break");
 
-		Integer newValue = blockBreakStatistic.getInteger("block-break") + 1;
-		blockBreakStatistic.set("block-break", newValue);
+		System.out.println("got stat");
+
+		Integer newValue = blockBreakStatistic.getInteger("value") + 1;
+		blockBreakStatistic.set("value", newValue);
+		blockBreakStatistic.saveIt();
 
 		return newValue;
 	}
