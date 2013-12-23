@@ -32,11 +32,11 @@ public class Player extends Model
 			player.setName(playerName);
 			player.insert();
 
-//			PlayerServerRecord playerServerRecord = new PlayerServerRecord();
-//			playerServerRecord.insert();
-//
-//			playerServerRecord.setParent(Server.getCurrentServer());
-//			player.add(playerServerRecord);
+			PlayerServerRecord playerServerRecord = new PlayerServerRecord();
+			playerServerRecord.insert();
+
+			playerServerRecord.setParent(Server.getCurrentServer());
+			player.add(playerServerRecord);
 
 			Server.getCurrentServer();
 
@@ -51,6 +51,11 @@ public class Player extends Model
 	 *  Getters
 	 *
 	 */
+
+	public PlayerServerRecord getPlayerServerRecord()
+	{
+		return this.getAll(PlayerServerRecord.class).get(0);
+	}
 
 	public String getName()
 	{
@@ -93,11 +98,6 @@ public class Player extends Model
 	 *  Statistic Proxies
 	 *
 	 */
-
-	public PlayerServerRecord getPlayerServerRecord()
-	{
-		return this.getAll(PlayerServerRecord.class).get(0);
-	}
 
 	public Integer incrementBlockBreakStatistic()
 	{
