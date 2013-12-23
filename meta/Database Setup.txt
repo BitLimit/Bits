@@ -33,9 +33,9 @@ COMMENT ON COLUMN public.servers.name IS 'Derived from server.properties.';
 CREATE TABLE public.markets(
 	id serial,
 	saturation_multiplier numeric NOT NULL DEFAULT 1,
-	id_servers integer,
 	created_at timestamp,
 	updated_at timestamp,
+	id_servers integer,
 	CONSTRAINT id_3 PRIMARY KEY (id)
 
 );
@@ -180,6 +180,13 @@ ALTER TABLE public.players ADD CONSTRAINT players_uq UNIQUE (id_player_server_re
 
 
 -- object: servers_fk | type: CONSTRAINT --
+ALTER TABLE public.player_server_records ADD CONSTRAINT servers_fk FOREIGN KEY (id_servers)
+REFERENCES public.servers (id) MATCH FULL
+ON DELETE SET NULL ON UPDATE CASCADE NOT DEFERRABLE;
+-- ddl-end --
+
+
+-- object: servers_fk | type: CONSTRAINT --
 ALTER TABLE public.markets ADD CONSTRAINT servers_fk FOREIGN KEY (id_servers)
 REFERENCES public.servers (id) MATCH FULL
 ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
@@ -188,13 +195,6 @@ ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
 
 -- object: markets_uq | type: CONSTRAINT --
 ALTER TABLE public.markets ADD CONSTRAINT markets_uq UNIQUE (id_servers);
--- ddl-end --
-
-
--- object: servers_fk | type: CONSTRAINT --
-ALTER TABLE public.player_server_records ADD CONSTRAINT servers_fk FOREIGN KEY (id_servers)
-REFERENCES public.servers (id) MATCH FULL
-ON DELETE SET NULL ON UPDATE CASCADE NOT DEFERRABLE;
 -- ddl-end --
 
 
