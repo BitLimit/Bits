@@ -14,4 +14,38 @@ import org.javalite.activejdbc.annotations.BelongsTo;
 @BelongsTo(parent = Market.class, foreignKeyName = "id_markets")
 public class DemandLevel extends Model
 {
+	/*
+	 *
+	 *  Getters
+	 *
+	 */
+
+	public Float getDemand()
+	{
+		return this.getFloat("demand");
+	}
+
+	/*
+	 *
+	 *  Setters
+	 *
+	 */
+
+	public void setDemand(Float demand)
+	{
+		this.setFloat("demand", demand);
+	}
+
+	/*
+	 *
+	 *  Manipulation Convenience Methods
+	 *
+	 */
+
+	public void adjustDemandByFactor(Integer factor)
+	{
+		this.setDemand(this.getDemand() * (float)Math.pow(.99, factor));
+	}
+
+
 }

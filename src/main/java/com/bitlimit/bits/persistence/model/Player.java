@@ -124,7 +124,8 @@ public class Player extends Model
 			System.out.println(e.getLocalizedMessage());
 		}
 
-		playerServerRecord.getServer().getMarket().getDemandLevelForType("block-break");
+		DemandLevel demandLevel = playerServerRecord.getServer().getMarket().getDemandLevelForType("block-break");
+		demandLevel.adjustDemandByFactor(1);
 
 		return newValue;
 	}
