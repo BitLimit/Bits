@@ -52,4 +52,9 @@ public class PlayerServerRecord extends Model
 	{
 		return this.getAll(Player.class).get(0);
 	}
+
+	public Server getServer()
+	{
+		return this.getAll(Server.class).get(0);
+	}
 }

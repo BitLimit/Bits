@@ -110,16 +110,13 @@ public class Player extends Model
 	{
 		PlayerServerRecord playerServerRecord = this.getPlayerServerRecord();
 
-		System.out.println("got record + " + playerServerRecord.toString());
-
 		PlayerStatistic blockBreakStatistic = playerServerRecord.getPlayerStatisticWithType("block-break");
-
-		System.out.println("got stat");
 
 		Integer newValue = blockBreakStatistic.getInteger("value") + 1;
 		blockBreakStatistic.set("value", newValue);
 		blockBreakStatistic.saveIt();
 
+		playerServerRecord.getServer().getMarket().getDemandLevelForType("block-break");
 
 		return newValue;
 	}

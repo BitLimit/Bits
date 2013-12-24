@@ -68,6 +68,11 @@ public class Server extends Model
 	 *
 	 */
 
+	public Market getMarket()
+	{
+		this.getAll(Market.class).get(0);
+	}
+
 	public String getName()
 	{
 		return this.getString("name");

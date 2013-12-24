@@ -24,4 +24,26 @@ public class Market extends Model
 	{
 		return this.getAll(Server.class).get(0);
 	}
+
+	/*
+	 *
+	 *  Demand Proxies
+	 *
+	 */
+
+	public DemandLevel getDemandLevelForType(String type)
+	{
+		DemandLevel demandLevel = this.get(DemandLevel.class, "type = ?", type).get(0);
+
+		if (demandLevel == null)
+		{
+			demandLevel = new DemandLevel();
+			demandLevel.set("type", type);
+			demandLevel.set("demand", 1F);
+			demandLevel.setParents(this);
+			demandLevel.saveIt();
+		}
+
+		return demandLevel;
+	}
 }
