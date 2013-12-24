@@ -28,8 +28,6 @@ public class Server extends Model
 
 		if (server == null)
 		{
-			try
-			{
 			server = new Server();
 			server.setName(serverName);
 			server.saveIt();
@@ -47,11 +45,6 @@ public class Server extends Model
 			System.out.println("set parent");
 
 			serverMarket.saveIt();
-			}
-			catch (Exception e)
-			{
-				System.out.println("E " + e.getLocalizedMessage());
-			}
 		}
 
 		return server;
