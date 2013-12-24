@@ -126,6 +126,7 @@ public class Player extends Model
 
 		DemandLevel demandLevel = playerServerRecord.getServer().getMarket().getDemandLevelForType("block-break");
 		demandLevel.adjustDemandByFactor(1);
+		demandLevel.saveIt();
 
 		return newValue;
 	}

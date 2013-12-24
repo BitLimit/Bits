@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b1c196c-c742-4a3d-8979-7e7a30829a40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/DemandLevel.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/DemandLevel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java" />
     </list>
     <ignored path="Bits.iws" />
@@ -39,7 +38,7 @@
     <file path="/Server.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387847558052" ignored="false" />
     <file path="/Market.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387850262621" ignored="false" />
     <file path="/RecentTransaction.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387665732183" ignored="false" />
-    <file path="/Player.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387851357343" ignored="false" />
+    <file path="/Player.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387851427528" ignored="false" />
     <file path="/PlayerStatistic.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387777344363" ignored="false" />
     <file path="/PlayerServerRecord.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387850241249" ignored="false" />
     <file path="/PlayerKill.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387665800470" ignored="false" />
@@ -107,7 +106,7 @@
       <file leaf-file-name="Player.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="43" selection-start="2835" selection-end="2835" vertical-scroll-proportion="0.88584477">
+            <state line="128" column="29" selection-start="2860" selection-end="2860" vertical-scroll-proportion="0.89726025">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -864,7 +863,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="43" selection-start="2835" selection-end="2835" vertical-scroll-proportion="0.88584477">
+        <state line="128" column="29" selection-start="2860" selection-end="2860" vertical-scroll-proportion="0.89726025">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
