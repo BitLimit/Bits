@@ -14,6 +14,12 @@ import org.javalite.activejdbc.annotations.BelongsTo;
 @BelongsTo(parent = Server.class, foreignKeyName = "id_servers")
 public class Market extends Model
 {
+	/*
+	 *
+	 *  Getters
+	 *
+	 */
+
 	public Server getServer()
 	{
 		return this.getAll(Server.class).get(0);

@@ -100,8 +100,6 @@ public class Player extends Model
 		});
 	}
 
-
-
 	/*
 	 *
 	 *  Statistic Proxies
@@ -121,6 +119,7 @@ public class Player extends Model
 		Integer newValue = blockBreakStatistic.getInteger("value") + 1;
 		blockBreakStatistic.set("value", newValue);
 		blockBreakStatistic.saveIt();
+
 
 		return newValue;
 	}
