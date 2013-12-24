@@ -1,5 +1,6 @@
 package com.bitlimit.bits.persistence.model;
 
+import org.javalite.activejdbc.LazyList;
 import org.javalite.activejdbc.Model;
 import org.javalite.activejdbc.annotations.BelongsTo;
 
@@ -22,7 +23,7 @@ public class Market extends Model
 
 	public Server getServer()
 	{
-		return this.getAll(Server.class).get(0);
+		return this.parent(Server.class);
 	}
 
 	/*
@@ -33,14 +34,20 @@ public class Market extends Model
 
 	public DemandLevel getDemandLevelForType(String type)
 	{
-		DemandLevel demandLevel = this.get(DemandLevel.class, "type = ?", type).get(0);
+		LazyList<DemandLevel> fetched = this.get(DemandLevel.class, "type = ?", type);
+		DemandLevel demandLevel = null;
+
+		if (fetched.size() > 0)
+		{
+			demandLevel = fetched.get(0);
+		}
 
 		if (demandLevel == null)
 		{
 			demandLevel = new DemandLevel();
 			demandLevel.set("type", type);
 			demandLevel.set("demand", 1F);
-			demandLevel.setParents(this);
+			demandLevel.setParent(this);
 			demandLevel.saveIt();
 		}
 

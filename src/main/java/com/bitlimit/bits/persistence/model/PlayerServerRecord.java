@@ -28,7 +28,13 @@ public class PlayerServerRecord extends Model
 
 	public PlayerStatistic getPlayerStatisticWithType(String type)
 	{
-		PlayerStatistic playerStatistic = this.get(PlayerStatistic.class, "type = ?", type).get(0);
+		LazyList<PlayerStatistic> fetched = this.get(PlayerStatistic.class, "type = ?", type);
+		PlayerStatistic playerStatistic = null;
+
+		if (fetched.size() > 0)
+		{
+			playerStatistic = fetched.get(0);
+		}
 
 		if (playerStatistic == null)
 		{
@@ -50,11 +56,11 @@ public class PlayerServerRecord extends Model
 
 	public Player getPlayer()
 	{
-		return this.getAll(Player.class).get(0);
+		return this.parent(Player.class);
 	}
 
 	public Server getServer()
 	{
-		return this.getAll(Server.class).get(0);
+		return this.parent(Server.class);
 	}
 }
