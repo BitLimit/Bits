@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b1c196c-c742-4a3d-8979-7e7a30829a40" name="Default" comment="" />
+    <list default="true" id="5b1c196c-c742-4a3d-8979-7e7a30829a40" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/DemandLevel.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/DemandLevel.java" />
+    </list>
     <ignored path="Bits.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1388115377708" ignored="false" />
+    <file path="/Dummy.txt" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1388216615188" ignored="false" />
     <file path="/BitsPlugin.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387748100550" ignored="false" />
     <file path="$PROJECT_DIR$/../Pulse/src/main/java/com/bitlimit/pulse/bukkit/PulsePlugin.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387066438742" ignored="false" />
     <file path="/PulsePlugin.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387066394731" ignored="false" />
@@ -42,7 +44,7 @@
     <file path="/PlayerKill.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387665800470" ignored="false" />
     <file path="/PlayerDeath.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387665815284" ignored="false" />
     <file path="/a.dummy" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387848638438" ignored="false" />
-    <file path="/DemandLevel.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387851323625" ignored="false" />
+    <file path="/DemandLevel.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1388216654040" ignored="false" />
     <file path="/MarketManager.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387867888441" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +134,7 @@
       <file leaf-file-name="DemandLevel.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/DemandLevel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="35" selection-start="206" selection-end="206" vertical-scroll-proportion="0.09118541">
+            <state line="47" column="120" selection-start="893" selection-end="893" vertical-scroll-proportion="0.53571427">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -225,9 +227,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerServerRecord.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Market.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Server.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/DemandLevel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/MarketManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/DemandLevel.java" />
       </list>
     </option>
   </component>
@@ -272,7 +274,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -287,6 +288,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -542,13 +544,13 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="true" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="FullScreen" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -563,19 +565,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -604,6 +593,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -770,16 +772,12 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/javalite/activejdbc/1.4.8/activejdbc-1.4.8-sources.jar!/org/javalite/activejdbc/annotations/BelongsTo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="36" selection-start="608" selection-end="608" vertical-scroll-proportion="0.034246575">
-          <folding />
-        </state>
+        <state line="17" column="36" selection-start="608" selection-end="608" vertical-scroll-proportion="0.034246575" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/javalite/activejdbc/1.4.8/activejdbc-1.4.8-sources.jar!/org/javalite/activejdbc/Model.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2189" column="41" selection-start="90301" selection-end="90301" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="2189" column="41" selection-start="90301" selection-end="90301" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerKill.java">
@@ -854,7 +852,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/DemandLevel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="35" selection-start="206" selection-end="206" vertical-scroll-proportion="0.09118541">
+        <state line="47" column="120" selection-start="893" selection-end="893" vertical-scroll-proportion="0.53571427">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
