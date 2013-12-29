@@ -1,1 +1,1 @@
-2(-atan((1/5)x)/pi) + 1
+2(-atan((1/halfLife)x)/pi) + 1
