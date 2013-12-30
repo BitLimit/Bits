@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b1c196c-c742-4a3d-8979-7e7a30829a40" name="Default" comment="" />
+    <list default="true" id="5b1c196c-c742-4a3d-8979-7e7a30829a40" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/DemandLevel.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/DemandLevel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerServerRecord.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerServerRecord.java" />
+    </list>
     <ignored path="Bits.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1388216615188" ignored="false" />
+    <file path="/Dummy.txt" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1388381554136" ignored="false" />
     <file path="/BitsPlugin.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387748100550" ignored="false" />
     <file path="$PROJECT_DIR$/../Pulse/src/main/java/com/bitlimit/pulse/bukkit/PulsePlugin.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387066438742" ignored="false" />
     <file path="/PulsePlugin.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387066394731" ignored="false" />
@@ -58,7 +61,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -93,6 +95,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -129,10 +132,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DemandLevel.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DemandLevel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/DemandLevel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="120" selection-start="893" selection-end="893" vertical-scroll-proportion="0.53571427">
+            <state line="49" column="0" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,10 +143,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerServerRecord.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="PlayerServerRecord.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerServerRecord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="41" selection-start="1306" selection-end="1306" vertical-scroll-proportion="0.0">
+            <state line="43" column="37" selection-start="1133" selection-end="1133" vertical-scroll-proportion="0.45592704">
               <folding />
             </state>
           </provider>
@@ -222,12 +225,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerStatistic.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerServerRecord.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Market.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Server.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/MarketManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/DemandLevel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerServerRecord.java" />
       </list>
     </option>
   </component>
@@ -286,7 +289,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -527,6 +529,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -542,13 +545,13 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="FullScreen" value="true" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -563,6 +566,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -591,19 +607,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -785,34 +788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="80" selection-start="956" selection-end="956" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerDeath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerServerRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="41" selection-start="1306" selection-end="1306" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerStatistic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="109" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Server.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="0" selection-start="1083" selection-end="1083" vertical-scroll-proportion="0.0">
@@ -850,10 +825,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/DemandLevel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="120" selection-start="893" selection-end="893" vertical-scroll-proportion="0.53571427">
+        <state line="49" column="0" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="80" selection-start="956" selection-end="956" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerDeath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="252" selection-end="252" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerStatistic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="109" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerServerRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="37" selection-start="1133" selection-end="1133" vertical-scroll-proportion="0.45592704">
+          <folding />
         </state>
       </provider>
     </entry>

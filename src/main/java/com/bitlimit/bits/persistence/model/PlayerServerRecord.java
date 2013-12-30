@@ -41,7 +41,7 @@ public class PlayerServerRecord extends Model
 			playerStatistic = new PlayerStatistic();
 			playerStatistic.set("type", type);
 			playerStatistic.set("value", 0);
-			playerStatistic.setParents(this);
+			playerStatistic.setParent(this);
 			playerStatistic.saveIt();
 		}
 

@@ -47,8 +47,6 @@ public class DemandLevel extends Model
 		/* Discussion: this recursive function was a first attempt.
 		 * It will be revised to use a positive incrementing count which will then be fed into an arctan based function.
 		 */
-
-//		this.setDemand(this.getDemand() * (float)Math.pow(.99, factor));
 	}
 
 
