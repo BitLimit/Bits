@@ -42,8 +42,6 @@ public class Server extends Model
 
 			serverMarket.setParent(server);
 
-			System.out.println("set parent");
-
 			serverMarket.saveIt();
 		}
 
