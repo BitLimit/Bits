@@ -48,7 +48,7 @@ public class DemandLevel extends Model
 		 * It will be revised to use a positive incrementing count which will then be fed into an arctan based function.
 		 */
 
-
+		this.setDemand(this.getDemand() + factor);
 	}
 
 
