@@ -42,13 +42,15 @@ public class DemandLevel extends Model
 	 *
 	 */
 
-	public void adjustDemandByFactor(Integer factor)
+	public void adjustDemandByAmount(Integer amount)
 	{
 		/* Discussion: this recursive function was a first attempt.
 		 * It will be revised to use a positive incrementing count which will then be fed into an arctan based function.
 		 */
 
-		this.setDemand(this.getDemand() + factor);
+		this.setDemand(this.getDemand() + amount);
+
+		/* Increment x-value so the y-value can be calculated formulaically and without the absolute uncontrollable nature of forced recursion. */
 	}
 
 
