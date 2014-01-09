@@ -56,7 +56,7 @@ public class Market extends Model
 		return demandLevel;
 	}
 
-	public void degradeDemandLevelsWithBaseInterval(Integer baseInterval)
+	public void degradeDemandLevelsWithBaseInterval(final Integer baseInterval)
 	{
 		LazyList<DemandLevel> demandLevels = this.getAll(DemandLevel.class);
 		Observable.from(demandLevels).subscribe(new Action1<DemandLevel>()
@@ -72,7 +72,7 @@ public class Market extends Model
 				}
 
 				Float demandToAdjustBy = baseInterval * weighting;
-				demandLevel.adjustDemandByAmount(demandToAdjustBy);
+				demandLevel.adjustDemandByAmount(-demandToAdjustBy);
 			}
 		});
 	}

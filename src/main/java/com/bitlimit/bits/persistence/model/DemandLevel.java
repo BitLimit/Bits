@@ -36,9 +36,9 @@ public class DemandLevel extends Model
 	 *
 	 */
 
-	public void setDemand(Integer demand)
+	public void setDemand(Float demand)
 	{
-		this.setInteger("demand", demand);
+		this.setFloat("demand", demand);
 	}
 
 	/*

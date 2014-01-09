@@ -2,10 +2,7 @@ package com.bitlimit.bits.persistence;
 
 import com.bitlimit.bits.persistence.model.Market;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -25,7 +22,7 @@ public class MarketManager
 	 *
 	 */
 
-	public MarketManager(Market market)
+	public MarketManager(final Market market)
 	{
 		this.market = market;
 
@@ -43,7 +40,7 @@ public class MarketManager
 			{
 				market.degradeDemandLevelsWithBaseInterval(interval);
 			}
-		});
+		}, interval, interval, TimeUnit.SECONDS);
 	}
 
 }
