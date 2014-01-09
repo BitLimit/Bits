@@ -58,5 +58,11 @@ public class DemandLevel extends Model
 		/* Increment x-value so the y-value can be calculated formulaically and without the absolute uncontrollable nature of forced recursion. */
 	}
 
+	public Float getCurrentValuation()
+	{
+		Float x = this.getDemand();/* x */
+		Float halfLife = 1F/5F; /* TODO: read from prefererences. */
 
+		return (2F * (-Math.atan((1F/halfLife) * x) / Math.PI) + 1F);
+	}
 }
