@@ -4,6 +4,7 @@ import com.bitlimit.bits.persistence.model.Market;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ThreadFactory;
 
 /**
@@ -16,7 +17,7 @@ import java.util.concurrent.ThreadFactory;
 public class MarketManager
 {
 	private final Market market;
-	private final ExecutorService executorService;
+	private final ScheduledExecutorService executorService;
 
 	/*
 	 *
@@ -28,11 +29,19 @@ public class MarketManager
 	{
 		this.market = market;
 
-		this.executorService = Executors.newScheduledThreadPool(1, new ThreadFactory()
+		final Integer interval = 10;
+		this.executorService = Executors.newScheduledThreadPool(interval, new ThreadFactory()
 		{
 			public Thread newThread(Runnable runnable)
 			{
 				return new PersistenceThread(runnable);
+			}
+		});
+		this.executorService.scheduleAtFixedRate(new PersistenceRunnable()
+		{
+			public void run()
+			{
+				market.degradeDemandLevelsWithBaseInterval(interval);
 			}
 		});
 	}

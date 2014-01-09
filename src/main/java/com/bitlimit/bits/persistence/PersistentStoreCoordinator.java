@@ -46,6 +46,8 @@ public class PersistentStoreCoordinator implements Listener
 
 	private final ExecutorService executorService;
 
+	private MarketManager marketManager;
+
 	/*
 	 *
 	 *  Implementation
@@ -62,6 +64,14 @@ public class PersistentStoreCoordinator implements Listener
 			public Thread newThread(Runnable runnable)
 			{
 				return new PersistenceThread(runnable);
+			}
+		});
+
+		this.executePersistenceRunnable(new PersistenceRunnable()
+		{
+			public void run()
+			{
+				marketManager = new MarketManager(Server.getCurrentServer().getMarket());
 			}
 		});
 	}

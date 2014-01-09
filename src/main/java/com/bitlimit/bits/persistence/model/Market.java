@@ -3,6 +3,8 @@ package com.bitlimit.bits.persistence.model;
 import org.javalite.activejdbc.LazyList;
 import org.javalite.activejdbc.Model;
 import org.javalite.activejdbc.annotations.BelongsTo;
+import rx.Observable;
+import rx.util.functions.Action1;
 
 /**
  * Created with IntelliJ IDEA.
@@ -52,5 +54,17 @@ public class Market extends Model
 		}
 
 		return demandLevel;
+	}
+
+	public void degradeDemandLevelsWithBaseInterval(Integer baseInterval)
+	{
+		LazyList<DemandLevel> demandLevels = this.getAll(DemandLevel.class);
+		Observable.from(demandLevels).subscribe(new Action1<DemandLevel>()
+		{
+			public void call(DemandLevel demandLevel)
+			{
+
+			}
+		});
 	}
 }
