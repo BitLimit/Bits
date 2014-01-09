@@ -63,7 +63,16 @@ public class Market extends Model
 		{
 			public void call(DemandLevel demandLevel)
 			{
+				String type = demandLevel.getType();
+				Float weighting = 1F;
 
+				if (type.equals("block-break"))
+				{
+					weighting = 5F;
+				}
+
+				Float demandToAdjustBy = baseInterval * weighting;
+				demandLevel.adjustDemandByAmount(demandToAdjustBy);
 			}
 		});
 	}

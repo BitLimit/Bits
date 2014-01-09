@@ -20,9 +20,14 @@ public class DemandLevel extends Model
 	 *
 	 */
 
-	public Integer getDemand()
+	public String getType()
 	{
-		return this.getInteger("demand");
+		return this.getString("type");
+	}
+
+	public Float getDemand()
+	{
+		return this.getFloat("demand");
 	}
 
 	/*
@@ -42,7 +47,7 @@ public class DemandLevel extends Model
 	 *
 	 */
 
-	public void adjustDemandByAmount(Integer amount)
+	public void adjustDemandByAmount(Float amount)
 	{
 		/* Discussion: this recursive function was a first attempt.
 		 * It will be revised to use a positive incrementing count which will then be fed into an arctan based function.
