@@ -38,6 +38,11 @@ public class DemandLevel extends Model
 
 	public void setDemand(Float demand)
 	{
+		if (demand < 0F)
+		{
+			demand = 0F;
+		}
+
 		this.setFloat("demand", demand);
 	}
 
@@ -63,6 +68,6 @@ public class DemandLevel extends Model
 		Float x = this.getDemand();/* x */
 		Float halfLife = 1F/5F; /* TODO: read from prefererences. */
 
-		return (2F * (-Math.atan((1F/halfLife) * x) / Math.PI) + 1F);
+		return (float)(2F * (-Math.atan((1F/halfLife) * x) / Math.PI) + 1F);
 	}
 }

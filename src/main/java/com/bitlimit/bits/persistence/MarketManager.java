@@ -38,9 +38,17 @@ public class MarketManager
 		{
 			public void run()
 			{
+				try
+				{
 				market.degradeDemandLevelsWithBaseInterval(interval);
+				}
+				catch (Exception e)
+				{
+					System.out.println(e.getLocalizedMessage());
+				}
 			}
 		}, interval, interval, TimeUnit.SECONDS);
+
 	}
 
 }
