@@ -73,8 +73,15 @@ public class DemandLevel extends Model
 
 	public Float getCurrentValuation()
 	{
-		Float x = this.getDemand();/* x */
-		Float halfLife = 5F; /* TODO: read from prefererences. */
+		Float x = this.getDemand(); /* x */
+
+		/* TODO: read from prefererences. */
+		Float halfLife = 1F;
+
+		if (this.getType().equals("block-break"))
+		{
+			halfLife = 500F;
+		}
 
 		return (float)(2F * (-Math.atan((1F/halfLife) * x) / Math.PI) + 1F);
 	}

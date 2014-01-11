@@ -65,14 +65,14 @@ public class Market extends Model
 			public void call(DemandLevel demandLevel)
 			{
 				String type = demandLevel.getType();
-				Float weighting = 1F;
+				Float defaultQuantity = 1F;
 
 				if (type.equals("block-break"))
 				{
-					weighting = 5F;
+					defaultQuantity = 5F;
 				}
 
-				Float demandToAdjustBy = baseInterval * weighting;
+				Float demandToAdjustBy = (baseInterval / 10) * defaultQuantity;
 				demandLevel.adjustDemandByAmount(-demandToAdjustBy);
 				demandLevel.saveIt();
 			}

@@ -152,7 +152,7 @@ public class Player extends Model
 		this.adjustBitsByAmount(demandLevel.getCurrentValuation());
 		this.saveIt();
 
-		Bukkit.getPlayer(this.getName()).sendMessage("Current balance is " + this.getBits());
+		Bukkit.getPlayer(this.getName()).sendMessage("Demand level: " + demandLevel.getDemand() + ". Valuation: " + demandLevel.getCurrentValuation());
 
 		demandLevel.adjustDemandByAmount(1F);
 		demandLevel.saveIt();
