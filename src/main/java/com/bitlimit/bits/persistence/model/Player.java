@@ -71,6 +71,11 @@ public class Player extends Model
 		return this.getString("name");
 	}
 
+	public Float getBits()
+	{
+		return this.getFloat("bits");
+	}
+
 	/*
 	 *
 	 *  Setters
@@ -80,6 +85,31 @@ public class Player extends Model
 	public void setName(String name)
 	{
 		this.setString("name", name);
+	}
+
+	public void setBits(Float bits)
+	{
+		this.setFloat("bits", bits);
+	}
+
+	public boolean adjustBitsByAmount(Float amount)
+	{
+		Float currentBalance = this.getBits();
+		if (currentBalance == null)
+		{
+			currentBalance = 0F;
+		}
+
+		Float nextBalance = currentBalance + amount;
+
+		if (nextBalance < 0F)
+		{
+			return false;
+		}
+
+		this.setBits(nextBalance);
+
+		return true;
 	}
 
 	/*
@@ -109,22 +139,21 @@ public class Player extends Model
 	public Integer incrementBlockBreakStatistic()
 	{
 		PlayerServerRecord playerServerRecord = this.getPlayerServerRecord();
-		Integer newValue = 0;
 
-		try
-		{
 		PlayerStatistic blockBreakStatistic = playerServerRecord.getPlayerStatisticWithType("block-break");
 
-		newValue = blockBreakStatistic.getInteger("value") + 1;
+
+		Integer newValue = blockBreakStatistic.getInteger("value") + 1;
 		blockBreakStatistic.set("value", newValue);
 		blockBreakStatistic.saveIt();
-		}
-		catch (Exception e)
-		{
-			System.out.println(e.getLocalizedMessage());
-		}
 
 		DemandLevel demandLevel = playerServerRecord.getServer().getMarket().getDemandLevelForType("block-break");
+
+		this.adjustBitsByAmount(demandLevel.getCurrentValuation());
+		this.saveIt();
+
+		Bukkit.getPlayer(this.getName()).sendMessage("Current balance is " + this.getBits());
+
 		demandLevel.adjustDemandByAmount(1F);
 		demandLevel.saveIt();
 

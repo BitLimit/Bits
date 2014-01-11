@@ -40,7 +40,9 @@ public class DemandLevel extends Model
 	{
 		if (demand < 0F)
 		{
-			demand = 0F;
+			System.out.println("bottoming out at 0");
+			this.setFloat("demand", 0F);
+			return;
 		}
 
 		this.setFloat("demand", demand);
@@ -58,7 +60,13 @@ public class DemandLevel extends Model
 		 * It will be revised to use a positive incrementing count which will then be fed into an arctan based function.
 		 */
 
-		this.setDemand(this.getDemand() + amount);
+		Float demand = this.getDemand();
+		if (demand == null)
+		{
+			demand = 0F;
+		}
+
+		this.setDemand(demand + amount);
 
 		/* Increment x-value so the y-value can be calculated formulaically and without the absolute uncontrollable nature of forced recursion. */
 	}
@@ -66,7 +74,7 @@ public class DemandLevel extends Model
 	public Float getCurrentValuation()
 	{
 		Float x = this.getDemand();/* x */
-		Float halfLife = 1F/5F; /* TODO: read from prefererences. */
+		Float halfLife = 5F; /* TODO: read from prefererences. */
 
 		return (float)(2F * (-Math.atan((1F/halfLife) * x) / Math.PI) + 1F);
 	}
