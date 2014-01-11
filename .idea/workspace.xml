@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b1c196c-c742-4a3d-8979-7e7a30829a40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Market.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Market.java" />
     </list>
     <ignored path="Bits.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,7 +36,7 @@
     <file path="/PersistenceThread.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387259080322" ignored="false" />
     <file path="/PersistenceRunnable.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387155229154" ignored="false" />
     <file path="/Server.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1389244893878" ignored="false" />
-    <file path="/Market.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1389465884747" ignored="false" />
+    <file path="/Market.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1389472526515" ignored="false" />
     <file path="/RecentTransaction.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387665732183" ignored="false" />
     <file path="/Player.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1389467055346" ignored="false" />
     <file path="/PlayerStatistic.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387777344363" ignored="false" />
@@ -122,22 +122,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Market.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Market.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Market.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="60" selection-start="1569" selection-end="1569" vertical-scroll-proportion="0.0">
+            <state line="72" column="76" selection-start="1574" selection-end="1574" vertical-scroll-proportion="0.76367784">
               <folding>
-                <element signature="e#1290#1680#0" expanded="true" />
-                <element signature="e#1675#1676#0" expanded="true" />
+                <element signature="e#1316#1743#0" expanded="true" />
+                <element signature="e#1738#1739#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DemandLevel.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DemandLevel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/DemandLevel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="235" selection-start="570" selection-end="570" vertical-scroll-proportion="0.36474165">
+            <state line="33" column="235" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -793,20 +793,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Market.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/DemandLevel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="60" selection-start="1569" selection-end="1569" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1290#1680#0" expanded="true" />
-            <element signature="e#1675#1676#0" expanded="true" />
-          </folding>
+        <state line="33" column="235" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/DemandLevel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Market.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="235" selection-start="570" selection-end="570" vertical-scroll-proportion="0.36474165">
-          <folding />
+        <state line="72" column="76" selection-start="1574" selection-end="1574" vertical-scroll-proportion="0.76367784">
+          <folding>
+            <element signature="e#1316#1743#0" expanded="true" />
+            <element signature="e#1738#1739#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

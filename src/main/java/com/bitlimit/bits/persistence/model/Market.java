@@ -1,5 +1,6 @@
 package com.bitlimit.bits.persistence.model;
 
+import org.bukkit.Bukkit;
 import org.javalite.activejdbc.LazyList;
 import org.javalite.activejdbc.Model;
 import org.javalite.activejdbc.annotations.BelongsTo;
@@ -69,7 +70,7 @@ public class Market extends Model
 
 				if (type.equals("block-break"))
 				{
-					defaultQuantity = 5F;
+					defaultQuantity = (2F * Bukkit.getOnlinePlayers().length);
 				}
 
 				Float demandToAdjustBy = (baseInterval / 10) * defaultQuantity;
