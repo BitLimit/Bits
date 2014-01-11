@@ -152,8 +152,6 @@ public class Player extends Model
 		this.adjustBitsByAmount(saturationLevel.getCurrentValuation());
 		this.saveIt();
 
-		Bukkit.getPlayer(this.getName()).sendMessage("Demand level: " + saturationLevel.getDemand() + ". Valuation: " + saturationLevel.getCurrentValuation());
-
 		saturationLevel.adjustDemandByAmount(1F);
 		saturationLevel.saveIt();
 
