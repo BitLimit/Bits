@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CAUTION: Do not modify this file unless you know what you are doing.
+         Unexpected results may occur if the code is changed deliberately.
+-->
+<dbmodel>
+<schema name="public" protected="true" fill-color="#e1e1e1" sql-disabled="true">
+</schema>
+
+<database name="bits">
+</database>
+
+<table name="servers">
+	<schema name="public"/>
+	<position x="811.579" y="508.421"/>
+	<column name="id">
+		<type name="serial"/>
+	</column>
+	<column name="name" not-null="true">
+		<type name="varchar" length="64"/>
+		<comment><![CDATA[Derived from server.properties.]]></comment>
+	</column>
+	<column name="created_at">
+		<type name="timestamp"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp"/>
+	</column>
+	<constraint name="id" type="pk-constr" factor="10" table="public.servers">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="markets">
+	<schema name="public"/>
+	<comment><![CDATA[Used for dynamic valuation.]]></comment>
+	<position x="1020" y="300"/>
+	<column name="id">
+		<type name="serial"/>
+	</column>
+	<column name="saturation_multiplier" not-null="true" default-value="1">
+		<type name="numeric"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp"/>
+	</column>
+	<constraint name="id_3" type="pk-constr" factor="10" table="public.markets">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="players">
+	<schema name="public"/>
+	<position x="1100" y="660"/>
+	<column name="name" not-null="true">
+		<type name="varchar" length="64"/>
+	</column>
+	<column name="bits" default-value="0">
+		<type name="numeric" length="16"/>
+	</column>
+	<column name="id">
+		<type name="serial"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp"/>
+	</column>
+	<constraint name="id_1" type="pk-constr" factor="10" table="public.players">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="player_server_records">
+	<schema name="public"/>
+	<position x="760" y="800"/>
+	<column name="id">
+		<type name="serial"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp"/>
+	</column>
+	<constraint name="id_2_1" type="pk-constr" factor="10" table="public.player_server_records">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="player_statistics">
+	<schema name="public"/>
+	<position x="1400" y="820"/>
+	<column name="id">
+		<type name="serial"/>
+	</column>
+	<column name="type" not-null="true">
+		<type name="varchar"/>
+	</column>
+	<column name="value" not-null="true">
+		<type name="numeric"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp"/>
+	</column>
+	<constraint name="id_1_1" type="pk-constr" factor="10" table="public.player_statistics">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<relationship name="player_server_record_has_many_player_statistics" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="3" constr-indexes="1"
+	 src-table="public.player_server_records"
+	 dst-table="public.player_statistics"
+	 src-required="true" dst-required="false">
+	<label ref-type="name-label">
+		<position x="0" y="0"/>
+	</label>
+</relationship>
+
+<table name="player_kills">
+	<schema name="public"/>
+	<position x="860" y="1040"/>
+	<column name="id">
+		<type name="serial"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp"/>
+	</column>
+	<constraint name="id_2_1_1" type="pk-constr" factor="10" table="public.player_kills">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="player_deaths">
+	<schema name="public"/>
+	<position x="1280" y="1040"/>
+	<column name="id">
+		<type name="serial"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp"/>
+	</column>
+	<constraint name="id_1_1_1" type="pk-constr" factor="10" table="public.player_deaths">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<relationship name="player_server_records_has_many_player_kills" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="1" constr-indexes="1"
+	 src-table="public.player_server_records"
+	 dst-table="public.player_kills"
+	 src-required="true" dst-required="false"/>
+
+<relationship name="player_deaths_has_one_player_kills" type="rel11"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="1" constr-indexes="1,2"
+	 src-table="public.player_kills"
+	 dst-table="public.player_deaths"
+	 src-required="true" dst-required="false"/>
+
+<relationship name="player_server_records_has_many_player_deaths" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="2" constr-indexes="3"
+	 src-table="public.player_server_records"
+	 dst-table="public.player_deaths"
+	 src-required="true" dst-required="false"/>
+
+<relationship name="servers_has_many_player_server_records" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="3" constr-indexes="1"
+	 src-table="public.servers"
+	 dst-table="public.player_server_records"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="servers_has_one_markets" type="rel11"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="4" constr-indexes="1,2"
+	 src-table="public.markets"
+	 dst-table="public.servers"
+	 src-required="false" dst-required="true"/>
+
+<relationship name="player_server_records_has_one_players" type="rel11"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="4" constr-indexes="2,3"
+	 src-table="public.players"
+	 dst-table="public.player_server_records"
+	 src-required="true" dst-required="false"/>
+
+<table name="saturation_levels">
+	<schema name="public"/>
+	<position x="1357" y="477"/>
+	<column name="id">
+		<type name="serial"/>
+	</column>
+	<column name="type" not-null="true">
+		<type name="varchar"/>
+	</column>
+	<column name="demand" not-null="true">
+		<type name="float"/>
+	</column>
+	<column name="created_at">
+		<type name="timestamp"/>
+	</column>
+	<column name="updated_at">
+		<type name="timestamp"/>
+	</column>
+	<constraint name="id_1_1_1_1" type="pk-constr" factor="10" table="public.saturation_levels">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<relationship name="markets_has_many_saturation_levels" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="5" constr-indexes="1"
+	 src-table="public.markets"
+	 dst-table="public.saturation_levels"
+	 src-required="true" dst-required="false"/>
+
+</dbmodel>
