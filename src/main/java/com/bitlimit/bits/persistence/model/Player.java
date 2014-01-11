@@ -147,15 +147,15 @@ public class Player extends Model
 		blockBreakStatistic.set("value", newValue);
 		blockBreakStatistic.saveIt();
 
-		DemandLevel demandLevel = playerServerRecord.getServer().getMarket().getDemandLevelForType("block-break");
+		SaturationLevel saturationLevel = playerServerRecord.getServer().getMarket().getDemandLevelForType("block-break");
 
-		this.adjustBitsByAmount(demandLevel.getCurrentValuation());
+		this.adjustBitsByAmount(saturationLevel.getCurrentValuation());
 		this.saveIt();
 
-		Bukkit.getPlayer(this.getName()).sendMessage("Demand level: " + demandLevel.getDemand() + ". Valuation: " + demandLevel.getCurrentValuation());
+		Bukkit.getPlayer(this.getName()).sendMessage("Demand level: " + saturationLevel.getDemand() + ". Valuation: " + saturationLevel.getCurrentValuation());
 
-		demandLevel.adjustDemandByAmount(1F);
-		demandLevel.saveIt();
+		saturationLevel.adjustDemandByAmount(1F);
+		saturationLevel.saveIt();
 
 		return newValue;
 	}

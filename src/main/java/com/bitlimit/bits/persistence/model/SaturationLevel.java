@@ -12,7 +12,7 @@ import org.javalite.activejdbc.annotations.BelongsTo;
  */
 
 @BelongsTo(parent = Market.class, foreignKeyName = "id_markets")
-public class DemandLevel extends Model
+public class SaturationLevel extends Model
 {
 	/*
 	 *

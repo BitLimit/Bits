@@ -35,37 +35,37 @@ public class Market extends Model
 	 *
 	 */
 
-	public DemandLevel getDemandLevelForType(String type)
+	public SaturationLevel getDemandLevelForType(String type)
 	{
-		LazyList<DemandLevel> fetched = this.get(DemandLevel.class, "type = ?", type);
-		DemandLevel demandLevel = null;
+		LazyList<SaturationLevel> fetched = this.get(SaturationLevel.class, "type = ?", type);
+		SaturationLevel saturationLevel = null;
 
 		if (fetched.size() > 0)
 		{
-			demandLevel = fetched.get(0);
+			saturationLevel = fetched.get(0);
 		}
 
-		if (demandLevel == null)
+		if (saturationLevel == null)
 		{
-			demandLevel = new DemandLevel();
-			demandLevel.set("type", type);
-			demandLevel.set("demand", 1F);
-			demandLevel.setParent(this);
-			demandLevel.saveIt();
+			saturationLevel = new SaturationLevel();
+			saturationLevel.set("type", type);
+			saturationLevel.set("demand", 1F);
+			saturationLevel.setParent(this);
+			saturationLevel.saveIt();
 		}
 
-		return demandLevel;
+		return saturationLevel;
 	}
 
 	public void degradeDemandLevelsWithBaseInterval(final Integer baseInterval)
 	{
-		LazyList<DemandLevel> demandLevels = this.getAll(DemandLevel.class);
+		LazyList<SaturationLevel> saturationLevels = this.getAll(SaturationLevel.class);
 
-		Observable.from(demandLevels).subscribe(new Action1<DemandLevel>()
+		Observable.from(saturationLevels).subscribe(new Action1<SaturationLevel>()
 		{
-			public void call(DemandLevel demandLevel)
+			public void call(SaturationLevel saturationLevel)
 			{
-				String type = demandLevel.getType();
+				String type = saturationLevel.getType();
 				Float defaultQuantity = 1F;
 
 				if (type.equals("block-break"))
@@ -74,8 +74,8 @@ public class Market extends Model
 				}
 
 				Float demandToAdjustBy = (baseInterval / 10) * defaultQuantity;
-				demandLevel.adjustDemandByAmount(-demandToAdjustBy);
-				demandLevel.saveIt();
+				saturationLevel.adjustDemandByAmount(-demandToAdjustBy);
+				saturationLevel.saveIt();
 			}
 		});
 	}

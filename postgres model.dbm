@@ -216,7 +216,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	 dst-table="public.player_server_records"
 	 src-required="true" dst-required="false"/>
 
-<table name="demand_levels">
+<table name="saturation_levels">
 	<schema name="public"/>
 	<position x="1357" y="477"/>
 	<column name="id">
@@ -234,18 +234,18 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="updated_at">
 		<type name="timestamp"/>
 	</column>
-	<constraint name="id_1_1_1_1" type="pk-constr" factor="10" table="public.demand_levels">
+	<constraint name="id_1_1_1_1" type="pk-constr" factor="10" table="public.saturation_levels">
 		<columns names="id" ref-type="src-columns"/>
 	</constraint>
 </table>
 
-<relationship name="markets_has_many_demand_levels" type="rel1n"
+<relationship name="markets_has_many_saturation_levels" type="rel1n"
 	 src-col-pattern="{sc}_{st}"
 	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
 	 src-fk-pattern="{st}_fk"
 	 col-indexes="5" constr-indexes="1"
 	 src-table="public.markets"
-	 dst-table="public.demand_levels"
+	 dst-table="public.saturation_levels"
 	 src-required="true" dst-required="false"/>
 
 </dbmodel>
