@@ -40,8 +40,8 @@ public class SaturationLevel extends Model
 	{
 		if (demand < 0F)
 		{
-			System.out.println("bottoming out at 0");
 			this.setFloat("demand", 0F);
+
 			return;
 		}
 
