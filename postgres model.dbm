@@ -59,7 +59,7 @@ CAUTION: Do not modify this file unless you know what you are doing.
 		<type name="varchar" length="64"/>
 	</column>
 	<column name="bits" default-value="0">
-		<type name="numeric" length="16"/>
+		<type name="numeric" length="16" precision="8"/>
 	</column>
 	<column name="id">
 		<type name="serial"/>
@@ -104,10 +104,10 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="value" not-null="true">
 		<type name="numeric"/>
 	</column>
-	<column name="created_at">
+	<column name="updated_at">
 		<type name="timestamp"/>
 	</column>
-	<column name="updated_at">
+	<column name="created_at">
 		<type name="timestamp"/>
 	</column>
 	<constraint name="id_1_1" type="pk-constr" factor="10" table="public.player_statistics">
@@ -134,10 +134,10 @@ CAUTION: Do not modify this file unless you know what you are doing.
 	<column name="id">
 		<type name="serial"/>
 	</column>
-	<column name="created_at">
+	<column name="updated_at">
 		<type name="timestamp"/>
 	</column>
-	<column name="updated_at">
+	<column name="created_at">
 		<type name="timestamp"/>
 	</column>
 	<constraint name="id_2_1_1" type="pk-constr" factor="10" table="public.player_kills">

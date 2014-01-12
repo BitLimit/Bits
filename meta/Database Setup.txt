@@ -47,7 +47,7 @@ COMMENT ON TABLE public.markets IS 'Used for dynamic valuation.';
 -- object: public.players | type: TABLE --
 CREATE TABLE public.players(
 	name varchar(64) NOT NULL,
-	bits numeric(16) DEFAULT 0,
+	bits numeric(16,8) DEFAULT 0,
 	id serial,
 	created_at timestamp,
 	updated_at timestamp,

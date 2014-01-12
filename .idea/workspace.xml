@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b1c196c-c742-4a3d-8979-7e7a30829a40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/CommandDispatch.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/CommandDispatch.java" />
-    </list>
+    <list default="true" id="5b1c196c-c742-4a3d-8979-7e7a30829a40" name="Default" comment="" />
     <ignored path="Bits.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1389559527287" ignored="false" />
@@ -46,7 +44,7 @@
     <file path="/a.dummy" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1389483319869" ignored="false" />
     <file path="/DemandLevel.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1389465132662" ignored="false" />
     <file path="/MarketManager.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1389414830983" ignored="false" />
-    <file path="/CommandDispatch.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1389561849943" ignored="false" />
+    <file path="/CommandDispatch.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1389562024715" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,10 +139,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommandDispatch.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CommandDispatch.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/CommandDispatch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="130" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.35334346">
+            <state line="36" column="116" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1104#1276#0" expanded="true" />
@@ -172,10 +170,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersistenceThread.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="PersistenceThread.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistenceThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="13" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0">
+            <state line="34" column="13" selection-start="672" selection-end="672" vertical-scroll-proportion="0.37613982">
               <folding />
             </state>
           </provider>
@@ -769,37 +767,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistenceThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="13" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="11" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="99" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Market.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="82" column="17" selection-start="1847" selection-end="1847" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/SaturationLevel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="694" selection-end="694" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -820,12 +790,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/CommandDispatch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="130" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.35334346">
+        <state line="36" column="116" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1104#1276#0" expanded="true" />
             <element signature="e#1268#1269#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/SaturationLevel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="694" selection-end="694" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/listener/BlockBreakListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="99" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="11" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistenceThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="13" selection-start="672" selection-end="672" vertical-scroll-proportion="0.37613982">
+          <folding />
         </state>
       </provider>
     </entry>
