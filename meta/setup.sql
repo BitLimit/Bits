@@ -1,0 +1,185 @@
+-- Database generated with pgModeler (PostgreSQL Database Modeler).
+-- PostgreSQL version: 9.3
+-- Project Site: pgmodeler.com.br
+-- Model Author: ---
+
+SET check_function_bodies = false;
+-- ddl-end --
+
+
+-- Database creation must be done outside an multicommand file.
+-- These commands were put in this file only for convenience.
+-- -- object: bits | type: DATABASE --
+-- CREATE DATABASE bits
+-- ;
+-- -- ddl-end --
+-- 
+
+-- object: public.servers | type: TABLE --
+CREATE TABLE public.servers(
+	id serial,
+	name varchar(64) NOT NULL,
+	created_at timestamp,
+	updated_at timestamp,
+	CONSTRAINT id PRIMARY KEY (id)
+
+);
+-- ddl-end --
+COMMENT ON COLUMN public.servers.name IS 'Derived from server.properties.';
+-- ddl-end --
+-- ddl-end --
+
+-- object: public.markets | type: TABLE --
+CREATE TABLE public.markets(
+	id serial,
+	saturation_multiplier numeric NOT NULL DEFAULT 1,
+	created_at timestamp,
+	updated_at timestamp,
+	id_servers integer,
+	CONSTRAINT id_3 PRIMARY KEY (id)
+
+);
+-- ddl-end --
+COMMENT ON TABLE public.markets IS 'Used for dynamic valuation.';
+-- ddl-end --
+-- ddl-end --
+
+-- object: public.players | type: TABLE --
+CREATE TABLE public.players(
+	name varchar(64) NOT NULL,
+	bits numeric(16) DEFAULT 0,
+	id serial,
+	created_at timestamp,
+	updated_at timestamp,
+	CONSTRAINT id_1 PRIMARY KEY (id)
+
+);
+-- ddl-end --
+-- object: public.player_server_records | type: TABLE --
+CREATE TABLE public.player_server_records(
+	id serial,
+	created_at timestamp,
+	updated_at timestamp,
+	id_servers integer,
+	id_players integer,
+	CONSTRAINT id_2_1 PRIMARY KEY (id)
+
+);
+-- ddl-end --
+-- object: public.player_statistics | type: TABLE --
+CREATE TABLE public.player_statistics(
+	id serial,
+	type varchar NOT NULL,
+	value numeric NOT NULL,
+	id_player_server_records integer NOT NULL,
+	updated_at timestamp,
+	created_at timestamp,
+	CONSTRAINT id_1_1 PRIMARY KEY (id)
+
+);
+-- ddl-end --
+-- object: player_server_records_fk | type: CONSTRAINT --
+ALTER TABLE public.player_statistics ADD CONSTRAINT player_server_records_fk FOREIGN KEY (id_player_server_records)
+REFERENCES public.player_server_records (id) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
+-- ddl-end --
+
+
+-- object: public.player_kills | type: TABLE --
+CREATE TABLE public.player_kills(
+	id serial,
+	id_player_server_records integer NOT NULL,
+	updated_at timestamp,
+	created_at timestamp,
+	CONSTRAINT id_2_1_1 PRIMARY KEY (id)
+
+);
+-- ddl-end --
+-- object: public.player_deaths | type: TABLE --
+CREATE TABLE public.player_deaths(
+	id serial,
+	id_player_kills integer,
+	id_player_server_records integer NOT NULL,
+	created_at timestamp,
+	updated_at timestamp,
+	CONSTRAINT id_1_1_1 PRIMARY KEY (id)
+
+);
+-- ddl-end --
+-- object: player_server_records_fk | type: CONSTRAINT --
+ALTER TABLE public.player_kills ADD CONSTRAINT player_server_records_fk FOREIGN KEY (id_player_server_records)
+REFERENCES public.player_server_records (id) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
+-- ddl-end --
+
+
+-- object: player_kills_fk | type: CONSTRAINT --
+ALTER TABLE public.player_deaths ADD CONSTRAINT player_kills_fk FOREIGN KEY (id_player_kills)
+REFERENCES public.player_kills (id) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
+-- ddl-end --
+
+
+-- object: player_deaths_uq | type: CONSTRAINT --
+ALTER TABLE public.player_deaths ADD CONSTRAINT player_deaths_uq UNIQUE (id_player_kills);
+-- ddl-end --
+
+
+-- object: player_server_records_fk | type: CONSTRAINT --
+ALTER TABLE public.player_deaths ADD CONSTRAINT player_server_records_fk FOREIGN KEY (id_player_server_records)
+REFERENCES public.player_server_records (id) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
+-- ddl-end --
+
+
+-- object: servers_fk | type: CONSTRAINT --
+ALTER TABLE public.player_server_records ADD CONSTRAINT servers_fk FOREIGN KEY (id_servers)
+REFERENCES public.servers (id) MATCH FULL
+ON DELETE SET NULL ON UPDATE CASCADE NOT DEFERRABLE;
+-- ddl-end --
+
+
+-- object: servers_fk | type: CONSTRAINT --
+ALTER TABLE public.markets ADD CONSTRAINT servers_fk FOREIGN KEY (id_servers)
+REFERENCES public.servers (id) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
+-- ddl-end --
+
+
+-- object: markets_uq | type: CONSTRAINT --
+ALTER TABLE public.markets ADD CONSTRAINT markets_uq UNIQUE (id_servers);
+-- ddl-end --
+
+
+-- object: players_fk | type: CONSTRAINT --
+ALTER TABLE public.player_server_records ADD CONSTRAINT players_fk FOREIGN KEY (id_players)
+REFERENCES public.players (id) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
+-- ddl-end --
+
+
+-- object: player_server_records_uq | type: CONSTRAINT --
+ALTER TABLE public.player_server_records ADD CONSTRAINT player_server_records_uq UNIQUE (id_players);
+-- ddl-end --
+
+
+-- object: public.saturation_levels | type: TABLE --
+CREATE TABLE public.saturation_levels(
+	id serial,
+	type varchar NOT NULL,
+	demand float NOT NULL,
+	created_at timestamp,
+	updated_at timestamp,
+	id_markets integer NOT NULL,
+	CONSTRAINT id_1_1_1_1 PRIMARY KEY (id)
+
+);
+-- ddl-end --
+-- object: markets_fk | type: CONSTRAINT --
+ALTER TABLE public.saturation_levels ADD CONSTRAINT markets_fk FOREIGN KEY (id_markets)
+REFERENCES public.markets (id) MATCH FULL
+ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
+-- ddl-end --
+
+
+
