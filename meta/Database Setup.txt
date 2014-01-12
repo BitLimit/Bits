@@ -72,8 +72,8 @@ CREATE TABLE public.player_statistics(
 	type varchar NOT NULL,
 	value numeric NOT NULL,
 	id_player_server_records integer NOT NULL,
-	created_at timestamp,
 	updated_at timestamp,
+	created_at timestamp,
 	CONSTRAINT id_1_1 PRIMARY KEY (id)
 
 );
@@ -89,8 +89,8 @@ ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
 CREATE TABLE public.player_kills(
 	id serial,
 	id_player_server_records integer NOT NULL,
-	created_at timestamp,
 	updated_at timestamp,
+	created_at timestamp,
 	CONSTRAINT id_2_1_1 PRIMARY KEY (id)
 
 );
@@ -163,27 +163,23 @@ ALTER TABLE public.player_server_records ADD CONSTRAINT player_server_records_uq
 -- ddl-end --
 
 
--- object: public.demand_levels | type: TABLE --
-CREATE TABLE public.demand_levels(
+-- object: public.saturation_levels | type: TABLE --
+CREATE TABLE public.saturation_levels(
 	id serial,
 	type varchar NOT NULL,
-	demand numeric NOT NULL,
-	updated_at timestamp,
+	demand float NOT NULL,
 	created_at timestamp,
+	updated_at timestamp,
 	id_markets integer NOT NULL,
 	CONSTRAINT id_1_1_1_1 PRIMARY KEY (id)
 
 );
 -- ddl-end --
 -- object: markets_fk | type: CONSTRAINT --
-ALTER TABLE public.demand_levels ADD CONSTRAINT markets_fk FOREIGN KEY (id_markets)
+ALTER TABLE public.saturation_levels ADD CONSTRAINT markets_fk FOREIGN KEY (id_markets)
 REFERENCES public.markets (id) MATCH FULL
 ON DELETE RESTRICT ON UPDATE CASCADE NOT DEFERRABLE;
 -- ddl-end --
-
-
-
--- GENERATED END --
 
 
 
