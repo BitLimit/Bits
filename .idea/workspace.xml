@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b1c196c-c742-4a3d-8979-7e7a30829a40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/CommandDispatch.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/CommandDispatch.java" />
     </list>
     <ignored path="Bits.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,7 +46,7 @@
     <file path="/a.dummy" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1389483319869" ignored="false" />
     <file path="/DemandLevel.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1389465132662" ignored="false" />
     <file path="/MarketManager.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1389414830983" ignored="false" />
-    <file path="/CommandDispatch.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1389559776229" ignored="false" />
+    <file path="/CommandDispatch.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1389561849943" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,21 +132,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BitsPlugin.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BitsPlugin.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="67" selection-start="609" selection-end="609" vertical-scroll-proportion="0.11398176">
+            <state line="17" column="67" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommandDispatch.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CommandDispatch.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/CommandDispatch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="181" selection-start="790" selection-end="790" vertical-scroll-proportion="0.0">
+            <state line="31" column="130" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.35334346">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1104#1276#0" expanded="true" />
+                <element signature="e#1268#1269#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -229,8 +231,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Market.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/SaturationLevel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/CommandDispatch.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/CommandDispatch.java" />
       </list>
     </option>
   </component>
@@ -741,7 +743,9 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/javalite/activejdbc/1.4.8/activejdbc-1.4.8-sources.jar!/org/javalite/activejdbc/LazyList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="13" selection-start="1172" selection-end="1172" vertical-scroll-proportion="0.1536643" />
+        <state line="39" column="13" selection-start="1172" selection-end="1172" vertical-scroll-proportion="0.1536643">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Server.java">
@@ -793,13 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="22" selection-start="3219" selection-end="3219" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/SaturationLevel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="0" selection-start="694" selection-end="694" vertical-scroll-proportion="0.0">
@@ -807,19 +804,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/CommandDispatch.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="181" selection-start="790" selection-end="790" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="17" column="67" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/BitsPlugin.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="67" selection-start="609" selection-end="609" vertical-scroll-proportion="0.11398176">
+        <state line="152" column="22" selection-start="3219" selection-end="3219" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/CommandDispatch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="130" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.35334346">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1104#1276#0" expanded="true" />
+            <element signature="e#1268#1269#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,5 +1,8 @@
 package com.bitlimit.bits.bukkit;
 
+import com.bitlimit.bits.persistence.PersistenceRunnable;
+import com.bitlimit.bits.persistence.PersistentStoreCoordinator;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -19,9 +22,23 @@ public class CommandDispatch implements CommandExecutor
 	{
 		if (commandSender instanceof Player)
 		{
-			Player player = (Player)commandSender;
+			final Player player = (Player)commandSender;
 
-			player.sendMessage(ChatColor.GOLD + "You have " + BitsPlugin.getBitsSymbol() + com.bitlimit.bits.persistence.model.Player.getPlayerForBukkitPlayer(player).getBits() + ".");
+			PersistentStoreCoordinator.getSharedCoordinator().executePersistenceRunnable(new PersistenceRunnable()
+			{
+				public void run()
+				{
+					final Float bitsCount = com.bitlimit.bits.persistence.model.Player.getPlayerForBukkitPlayer(player).getBits();
+
+					Bukkit.getScheduler().scheduleSyncDelayedTask(BitsPlugin.getPlugin(), new Runnable()
+					{
+						public void run()
+						{
+							player.sendMessage(ChatColor.GOLD + "You have " + BitsPlugin.getBitsSymbol() + bitsCount + ".");
+						}
+					});
+				}
+			});
 		}
 
 		return false;
