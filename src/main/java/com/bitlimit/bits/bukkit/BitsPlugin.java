@@ -15,6 +15,7 @@ public class BitsPlugin extends JavaPlugin
 	public void onEnable()
 	{
 		ListenerManager.getListenerManager().initialize();
+		this.getCommand("bits").setExecutor(new CommandDispatch());
 
 		Pulse.notePluginCondition(this, PluginCondition.LOADED, true, null);
 	}
