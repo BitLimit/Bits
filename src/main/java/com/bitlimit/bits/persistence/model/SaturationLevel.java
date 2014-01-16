@@ -80,7 +80,7 @@ public class SaturationLevel extends Model
 
 		if (this.getType().equals("block-break"))
 		{
-			halfLife = 500F;
+			halfLife = 5000F;
 		}
 
 		return (float)(2F * (-Math.atan((1F/halfLife) * x) / Math.PI) + 1F);
