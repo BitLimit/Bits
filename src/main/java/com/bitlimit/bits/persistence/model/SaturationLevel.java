@@ -1,5 +1,6 @@
 package com.bitlimit.bits.persistence.model;
 
+import org.bukkit.Bukkit;
 import org.javalite.activejdbc.Model;
 import org.javalite.activejdbc.annotations.BelongsTo;
 
@@ -77,10 +78,11 @@ public class SaturationLevel extends Model
 
 		/* TODO: read from prefererences. */
 		Float halfLife = 1F;
+		Float playerCount = (float)Bukkit.getOnlinePlayers().length;
 
 		if (this.getType().equals("block-break"))
 		{
-			halfLife = 5000F;
+			halfLife = 5000F * playerCount;
 		}
 
 		return (float)(2F * (-Math.atan((1F/halfLife) * x) / Math.PI) + 1F);
