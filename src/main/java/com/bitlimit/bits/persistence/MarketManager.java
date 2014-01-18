@@ -25,30 +25,6 @@ public class MarketManager
 	public MarketManager(final Market market)
 	{
 		this.market = market;
-
-		final Integer interval = 10;
-		this.executorService = Executors.newScheduledThreadPool(interval, new ThreadFactory()
-		{
-			public Thread newThread(Runnable runnable)
-			{
-				return new PersistenceThread(runnable);
-			}
-		});
-		this.executorService.scheduleAtFixedRate(new PersistenceRunnable()
-		{
-			public void run()
-			{
-				try
-				{
-				market.degradeDemandLevelsWithBaseInterval(interval);
-				}
-				catch (Exception e)
-				{
-					System.out.println(e.getLocalizedMessage());
-				}
-			}
-		}, interval, interval, TimeUnit.SECONDS);
-
 	}
 
 }
