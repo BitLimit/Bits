@@ -26,14 +26,7 @@ public class BlockBreakListener extends EventListener
 			@Override
 			public void run()
 			{
-				try
-				{
-					Player.getPlayerForBukkitPlayer(blockBreakEvent.getPlayer()).incrementBlockBreakStatistic();
-				}
-				catch (Exception e)
-				{
-					System.out.println(e.getLocalizedMessage());
-				}
+				Player.getPlayerForBukkitPlayer(blockBreakEvent.getPlayer()).incrementBlockBreakStatistic();
 			}
 		});
 	}
