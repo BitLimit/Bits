@@ -14,7 +14,6 @@ import java.util.concurrent.*;
 public class MarketManager
 {
 	private final Market market;
-	private final ScheduledExecutorService executorService;
 
 	/*
 	 *
