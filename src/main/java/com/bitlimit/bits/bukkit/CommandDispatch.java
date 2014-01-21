@@ -34,7 +34,7 @@ public class CommandDispatch implements CommandExecutor
 					{
 						public void run()
 						{
-							player.sendMessage(ChatColor.GOLD + "You have " + BitsPlugin.getBitsSymbol() + bitsCount + ".");
+							player.sendMessage(ChatColor.AQUA + "You have " + BitsPlugin.getBitsSymbol() + bitsCount + ".");
 						}
 					});
 				}
