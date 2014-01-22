@@ -142,7 +142,6 @@ public class Player extends Model
 
 		PlayerStatistic blockBreakStatistic = playerServerRecord.getPlayerStatisticWithType("block-break");
 
-
 		Integer newValue = blockBreakStatistic.getInteger("value") + 1;
 		blockBreakStatistic.set("value", newValue);
 		blockBreakStatistic.saveIt();
