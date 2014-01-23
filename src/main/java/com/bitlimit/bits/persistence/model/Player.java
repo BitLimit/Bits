@@ -93,7 +93,7 @@ public class Player extends Model
 		this.setFloat("bits", bits);
 	}
 
-	public boolean adjustBitsByAmount(Float amount)
+	public boolean adjustBitsByAmount(Integer amount)
 	{
 		Float currentBalance = this.getBits();
 		if (currentBalance == null)
