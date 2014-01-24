@@ -1,6 +1,7 @@
 package com.bitlimit.bits.persistence.model;
 
 import com.bitlimit.bits.bukkit.BitsPlugin;
+import com.bitlimit.bits.bukkit.listener.BlockBreakListener;
 import com.bitlimit.pulse.Pulse;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -146,13 +147,8 @@ public class Player extends Model
 		blockBreakStatistic.set("value", newValue);
 		blockBreakStatistic.saveIt();
 
-		SaturationLevel saturationLevel = playerServerRecord.getServer().getMarket().getDemandLevelForType("block-break");
-
-		this.adjustBitsByAmount(saturationLevel.getCurrentValuation());
+		this.adjustBitsByAmount(BlockBreakListener.getBitValuation());
 		this.saveIt();
-
-		saturationLevel.adjustDemandByAmount(1F);
-		saturationLevel.saveIt();
 
 		return newValue;
 	}
