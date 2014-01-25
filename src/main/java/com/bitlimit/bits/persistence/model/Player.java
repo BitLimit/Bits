@@ -72,9 +72,9 @@ public class Player extends Model
 		return this.getString("name");
 	}
 
-	public Float getBits()
+	public Integer getBits()
 	{
-		return this.getFloat("bits");
+		return this.getInteger("bits");
 	}
 
 	/*
@@ -88,22 +88,22 @@ public class Player extends Model
 		this.setString("name", name);
 	}
 
-	public void setBits(Float bits)
+	public void setBits(Integer bits)
 	{
-		this.setFloat("bits", bits);
+		this.setInteger("bits", bits);
 	}
 
 	public boolean adjustBitsByAmount(Integer amount)
 	{
-		Float currentBalance = this.getBits();
+		Integer currentBalance = this.getBits();
 		if (currentBalance == null)
 		{
-			currentBalance = 0F;
+			currentBalance = 0;
 		}
 
-		Float nextBalance = currentBalance + amount;
+		Integer nextBalance = currentBalance + amount;
 
-		if (nextBalance < 0F)
+		if (nextBalance < 0)
 		{
 			return false;
 		}
