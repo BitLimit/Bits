@@ -1,5 +1,6 @@
 package com.bitlimit.bits.persistence;
 
+import com.bitlimit.bits.bukkit.BitsPlugin;
 import com.bitlimit.bits.configuration.ConfigurationManager;
 import com.bitlimit.bits.persistence.model.Market;
 import com.bitlimit.bits.persistence.model.Server;
@@ -56,7 +57,7 @@ public class PersistentStoreCoordinator implements Listener
 
 	protected PersistentStoreCoordinator()
 	{
-		this.plugin = Bukkit.getPluginManager().getPlugin("Bits");
+		this.plugin = BitsPlugin.getPlugin();
 		Bukkit.getPluginManager().registerEvents(this, this.plugin);
 
 		this.executorService = Executors.newFixedThreadPool(4, new ThreadFactory()
