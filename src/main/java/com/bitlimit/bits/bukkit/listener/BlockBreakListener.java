@@ -26,15 +26,13 @@ public class BlockBreakListener extends EventListener
 			@Override
 			public void run()
 			{
-				try
-				{
-					Player.getPlayerForBukkitPlayer(blockBreakEvent.getPlayer()).incrementBlockBreakStatistic();
-				}
-				catch (Exception e)
-				{
-					System.out.println(e.getLocalizedMessage());
-				}
+				Player.getPlayerForBukkitPlayer(blockBreakEvent.getPlayer()).incrementBlockBreakStatistic();
 			}
 		});
+	}
+
+	public static Integer getBitValuation()
+	{
+		return 1;
 	}
 }

@@ -1,6 +1,7 @@
 package com.bitlimit.bits.persistence.model;
 
 import com.bitlimit.bits.bukkit.BitsPlugin;
+import com.bitlimit.bits.bukkit.listener.BlockBreakListener;
 import com.bitlimit.pulse.Pulse;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -71,9 +72,9 @@ public class Player extends Model
 		return this.getString("name");
 	}
 
-	public Float getBits()
+	public Integer getBits()
 	{
-		return this.getFloat("bits");
+		return this.getInteger("bits");
 	}
 
 	/*
@@ -87,22 +88,22 @@ public class Player extends Model
 		this.setString("name", name);
 	}
 
-	public void setBits(Float bits)
+	public void setBits(Integer bits)
 	{
-		this.setFloat("bits", bits);
+		this.setInteger("bits", bits);
 	}
 
-	public boolean adjustBitsByAmount(Float amount)
+	public boolean adjustBitsByAmount(Integer amount)
 	{
-		Float currentBalance = this.getBits();
+		Integer currentBalance = this.getBits();
 		if (currentBalance == null)
 		{
-			currentBalance = 0F;
+			currentBalance = 0;
 		}
 
-		Float nextBalance = currentBalance + amount;
+		Integer nextBalance = currentBalance + amount;
 
-		if (nextBalance < 0F)
+		if (nextBalance < 0)
 		{
 			return false;
 		}
@@ -142,19 +143,19 @@ public class Player extends Model
 
 		PlayerStatistic blockBreakStatistic = playerServerRecord.getPlayerStatisticWithType("block-break");
 
-
 		Integer newValue = blockBreakStatistic.getInteger("value") + 1;
 		blockBreakStatistic.set("value", newValue);
 		blockBreakStatistic.saveIt();
 
-		SaturationLevel saturationLevel = playerServerRecord.getServer().getMarket().getDemandLevelForType("block-break");
-
-		this.adjustBitsByAmount(saturationLevel.getCurrentValuation());
+		this.adjustBitsByAmount(BlockBreakListener.getBitValuation());
 		this.saveIt();
 
+<<<<<<< HEAD
 		saturationLevel.adjustDemandByAmount(1F);
 		saturationLevel.saveIt();
 
+=======
+>>>>>>> linear
 		return newValue;
 	}
 

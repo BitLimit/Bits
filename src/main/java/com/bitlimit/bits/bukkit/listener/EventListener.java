@@ -26,4 +26,9 @@ public class EventListener implements Listener
 	{
 		Pulse.recordCondition(BitsPlugin.getPlugin(), event.getEventName() + " received.", Level.FINEST);
 	}
+
+	public static Integer getBitValuation()
+	{
+		return 0;
+	}
 }
