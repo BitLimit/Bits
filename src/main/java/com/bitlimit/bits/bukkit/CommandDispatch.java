@@ -28,7 +28,7 @@ public class CommandDispatch implements CommandExecutor
 			{
 				public void run()
 				{
-					final Float bitsCount = com.bitlimit.bits.persistence.model.Player.getPlayerForBukkitPlayer(player).getBits();
+					final Integer bitsCount = com.bitlimit.bits.persistence.model.Player.getPlayerForBukkitPlayer(player).getBits();
 
 					Bukkit.getScheduler().scheduleSyncDelayedTask(BitsPlugin.getPlugin(), new Runnable()
 					{
