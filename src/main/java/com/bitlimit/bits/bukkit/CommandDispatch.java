@@ -28,21 +28,13 @@ public class CommandDispatch implements CommandExecutor
 			{
 				public void run()
 				{
-<<<<<<< HEAD
-					final Float bitsCount = com.bitlimit.bits.persistence.model.Player.getPlayerForBukkitPlayer(player).getBits();
-=======
 					final Integer bitsCount = com.bitlimit.bits.persistence.model.Player.getPlayerForBukkitPlayer(player).getBits();
->>>>>>> linear
 
 					Bukkit.getScheduler().scheduleSyncDelayedTask(BitsPlugin.getPlugin(), new Runnable()
 					{
 						public void run()
 						{
-<<<<<<< HEAD
-							player.sendMessage(ChatColor.GOLD + "You have " + BitsPlugin.getBitsSymbol() + bitsCount + ".");
-=======
 							player.sendMessage(ChatColor.AQUA + "You have " + BitsPlugin.getBitsSymbol() + bitsCount + ".");
->>>>>>> linear
 						}
 					});
 				}
