@@ -86,8 +86,8 @@ public class PersistentStoreCoordinator implements Listener
 		}
 	}
 
-	public void executePersistenceRunnable(PersistenceRunnable runnable)
+	public Future<?> executePersistenceRunnable(PersistenceRunnable runnable)
 	{
-		this.executorService.submit(runnable);
+		return this.executorService.submit(runnable);
 	}
 }
