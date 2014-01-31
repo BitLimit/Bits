@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b1c196c-c742-4a3d-8979-7e7a30829a40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistenceRunnable.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistenceRunnable.java" />
     </list>
     <ignored path="Bits.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +34,7 @@
     <file path="/fragment.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387777337829" ignored="false" />
     <file path="/PersistentStoreRunnable.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387152807780" ignored="false" />
     <file path="/PersistenceThread.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387259080322" ignored="false" />
-    <file path="/PersistenceRunnable.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387155229154" ignored="false" />
+    <file path="/PersistenceRunnable.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1391285908447" ignored="false" />
     <file path="/Server.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1389244893878" ignored="false" />
     <file path="/Market.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1389472526515" ignored="false" />
     <file path="/RecentTransaction.java" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1387665732183" ignored="false" />
@@ -169,10 +169,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersistentStoreCoordinator.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PersistentStoreCoordinator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="53" selection-start="2064" selection-end="2064" vertical-scroll-proportion="0.8092705">
+            <state line="90" column="53" selection-start="2064" selection-end="2064" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -187,10 +187,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersistenceRunnable.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="PersistenceRunnable.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistenceRunnable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="554" selection-end="554" vertical-scroll-proportion="0.0">
+            <state line="21" column="8" selection-start="557" selection-end="557" vertical-scroll-proportion="0.2393617">
               <folding />
             </state>
           </provider>
@@ -214,7 +214,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/RecentTransaction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerKill.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerDeath.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/PlayerStatistic.java" />
@@ -230,6 +229,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/Market.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/bukkit/CommandDispatch.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistenceRunnable.java" />
       </list>
     </option>
   </component>
@@ -750,13 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistenceRunnable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="554" selection-end="554" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/model/SaturationLevel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="80" column="53" selection-start="1516" selection-end="1516" vertical-scroll-proportion="0.0">
@@ -806,6 +799,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="53" selection-start="2064" selection-end="2064" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistenceThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="13" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0">
@@ -813,9 +813,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistenceRunnable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="53" selection-start="2064" selection-end="2064" vertical-scroll-proportion="0.8092705">
+        <state line="21" column="8" selection-start="557" selection-end="557" vertical-scroll-proportion="0.2393617">
           <folding />
         </state>
       </provider>

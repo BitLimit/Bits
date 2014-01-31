@@ -19,5 +19,6 @@ public class PersistenceRunnable implements Runnable
 		 *
 		 */
 
+		assert (Thread.currentThread() instanceof PersistenceThread);
 	}
 }
