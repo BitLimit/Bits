@@ -47,8 +47,6 @@ public class PersistentStoreCoordinator implements Listener
 
 	private final ExecutorService executorService;
 
-	private MarketManager marketManager;
-
 	/*
 	 *
 	 *  Implementation
