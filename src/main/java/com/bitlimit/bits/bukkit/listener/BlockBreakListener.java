@@ -31,7 +31,7 @@ public class BlockBreakListener extends EventListener
 		});
 	}
 
-	public static Integer getBitValuation()
+	public static Integer getValueInBits()
 	{
 		return 1;
 	}
