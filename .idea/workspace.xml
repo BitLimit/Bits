@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b1c196c-c742-4a3d-8979-7e7a30829a40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java" afterPath="$PROJECT_DIR$/src/main/java/com/bitlimit/bits/persistence/PersistentStoreCoordinator.java" />
-    </list>
+    <list default="true" id="5b1c196c-c742-4a3d-8979-7e7a30829a40" name="Default" comment="" />
     <ignored path="Bits.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="5b1c196c-c742-4a3d-8979-7e7a30829a40" time="1391284265980" ignored="false" />
